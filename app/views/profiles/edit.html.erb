@@ -1,0 +1,6 @@
+<div id="edit_content" class="span-24 colborder column">
+  <%= output_errors(t('muck.profiles.problem_editing_profile'), {:class => 'help-box'}, @profile) %>
+  <% profile_form(@profile) do |f| -%>
+    <%# can add form fields as desired here -%>
+  <% end -%>
+</div>
