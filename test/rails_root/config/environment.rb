@@ -17,9 +17,9 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
   config.gem "authlogic"
   config.gem "searchlogic"
-  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  config.gem 'will_paginate'
   config.gem "bcrypt-ruby", :lib => "bcrypt"
-  config.gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => "http://gems.github.com"
+  config.gem 'paperclip'
   config.gem 'muck-engine', :lib => 'muck_engine'
   config.gem 'muck-users', :lib => 'muck_users'
   config.plugin_locators << TestGemLocator

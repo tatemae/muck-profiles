@@ -50,7 +50,7 @@ begin
     gemspec.name = "muck-profiles"
     gemspec.summary = "Profile engine for the muck system"
     gemspec.email = "justinball@gmail.com"
-    gemspec.homepage = "http://github.com/jbasdf/muck_profiles"
+    gemspec.homepage = "http://github.com/tatemae/muck_profiles"
     gemspec.description = "Profile engine for the muck system."
     gemspec.authors = ["Justin Ball"]
     gemspec.rubyforge_project = 'muck-profiles'

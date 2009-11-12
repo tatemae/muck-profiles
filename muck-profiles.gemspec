@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-profiles}
-  s.version = "0.1.14"
+  s.version = "0.1.15"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball"]
-  s.date = %q{2009-10-29}
+  s.date = %q{2009-11-10}
   s.description = %q{Profile engine for the muck system.}
   s.email = %q{justinball@gmail.com}
   s.extra_rdoc_files = [
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
      "app/views/admin/profiles/edit.html.erb",
      "app/views/profiles/_form.html.erb",
      "app/views/profiles/_profile.html.erb",
+     "app/views/profiles/_profile_icon.html.erb",
      "app/views/profiles/edit.html.erb",
      "app/views/profiles/index.html.erb",
      "app/views/profiles/show.html.erb",

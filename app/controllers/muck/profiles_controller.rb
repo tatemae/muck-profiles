@@ -4,6 +4,7 @@ class Muck::ProfilesController < ApplicationController
   before_filter :setup_user, :only => [:show, :edit]
   
   def index
+    @per_page = 400
     @users = User.by_newest.paginate(:page => @page, :per_page => @per_page, :include => 'profile')
     respond_to do |format|
       format.html { render :template => 'profiles/index' }
