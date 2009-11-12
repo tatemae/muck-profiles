@@ -38,4 +38,4 @@ Your user model will now appear to have a 'photo' which is delegated to the prof
 
   @user.photo # returns a photo object from paperclip
 
-Copyright (c) 2009 Justin Ball, released under the MIT license
+Copyright (c) 2009 Tatemae, released under the MIT license

@@ -49,10 +49,10 @@ begin
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "muck-profiles"
     gemspec.summary = "Profile engine for the muck system"
-    gemspec.email = "justinball@gmail.com"
+    gemspec.email = "justin@tatemae.com"
     gemspec.homepage = "http://github.com/tatemae/muck_profiles"
     gemspec.description = "Profile engine for the muck system."
-    gemspec.authors = ["Justin Ball"]
+    gemspec.authors = ["Justin Ball", "Joel Duffin"]
     gemspec.rubyforge_project = 'muck-profiles'
     gemspec.add_dependency "muck-engine"
     gemspec.add_dependency "muck-users"
