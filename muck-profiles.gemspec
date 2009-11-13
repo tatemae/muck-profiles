@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-profiles}
-  s.version = "0.1.15"
+  s.version = "0.1.16"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2009-11-10}
+  s.date = %q{2009-11-13}
   s.description = %q{Profile engine for the muck system.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -89,7 +89,6 @@ Gem::Specification.new do |s|
      "tasks/rails.rake",
      "test/rails_root/.gitignore",
      "test/rails_root/.rake_tasks",
-     "test/rails_root/Capfile",
      "test/rails_root/Rakefile",
      "test/rails_root/app/controllers/application_controller.rb",
      "test/rails_root/app/controllers/default_controller.rb",
@@ -275,15 +274,10 @@ Gem::Specification.new do |s|
      "test/rails_root/script/process/spawner",
      "test/rails_root/script/runner",
      "test/rails_root/script/server",
-     "test/rails_root/test/factories.rb",
      "test/rails_root/test/functional/.keep",
      "test/rails_root/test/functional/admin/profiles_controller_test.rb",
      "test/rails_root/test/functional/profiles_controller_test.rb",
      "test/rails_root/test/integration/.keep",
-     "test/rails_root/test/mocks/development/.keep",
-     "test/rails_root/test/mocks/test/.keep",
-     "test/rails_root/test/shoulda_macros/controller.rb",
-     "test/rails_root/test/shoulda_macros/models.rb",
      "test/rails_root/test/test_helper.rb",
      "test/rails_root/test/unit/.keep",
      "test/rails_root/test/unit/profile_test.rb",
@@ -293,7 +287,7 @@ Gem::Specification.new do |s|
      "test/rails_root/vendor/plugins/ssl_requirement/test/ssl_requirement_test.rb",
      "uninstall.rb"
   ]
-  s.homepage = %q{http://github.com/jbasdf/muck_profiles}
+  s.homepage = %q{http://github.com/tatemae/muck_profiles}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{muck-profiles}
@@ -325,11 +319,8 @@ Gem::Specification.new do |s|
      "test/rails_root/features/support/env.rb",
      "test/rails_root/public/dispatch.rb",
      "test/rails_root/script/create_project.rb",
-     "test/rails_root/test/factories.rb",
      "test/rails_root/test/functional/admin/profiles_controller_test.rb",
      "test/rails_root/test/functional/profiles_controller_test.rb",
-     "test/rails_root/test/shoulda_macros/controller.rb",
-     "test/rails_root/test/shoulda_macros/models.rb",
      "test/rails_root/test/test_helper.rb",
      "test/rails_root/test/unit/profile_test.rb",
      "test/rails_root/test/unit/user_test.rb",
