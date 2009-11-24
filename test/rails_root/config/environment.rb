@@ -17,6 +17,7 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
   config.gem "authlogic"
   config.gem "searchlogic"
+  config.gem 'geokit'
   config.gem 'will_paginate'
   config.gem "bcrypt-ruby", :lib => "bcrypt"
   config.gem 'paperclip'
