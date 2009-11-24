@@ -56,6 +56,8 @@ begin
     gemspec.rubyforge_project = 'muck-profiles'
     gemspec.add_dependency "muck-engine"
     gemspec.add_dependency "muck-users"
+    gemspec.add_dependency "geokit"
+    gemspec.add_dependency "paperclip"
   end
   Jeweler::RubyforgeTasks.new do |rubyforge|
     rubyforge.doc_task = "rdoc"

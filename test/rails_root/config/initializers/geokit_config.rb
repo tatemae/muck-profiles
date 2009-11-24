@@ -21,12 +21,12 @@ if defined? Geokit
 	# This is your yahoo application key for the Yahoo Geocoder.
 	# See http://developer.yahoo.com/faq/index.html#appid
 	# and http://developer.yahoo.com/maps/rest/V1/geocode.html
-	Geokit::Geocoders::yahoo = 'REPLACE_WITH_YOUR_YAHOO_KEY'
+	Geokit::Geocoders::yahoo = GlobalConfig.yahoo_geo_key
     
 	# This is your Google Maps geocoder key. 
 	# See http://www.google.com/apis/maps/signup.html
 	# and http://www.google.com/apis/maps/documentation/#Geocoding_Examples
-	Geokit::Geocoders::google = 'REPLACE_WITH_YOUR_GOOGLE_KEY'
+	Geokit::Geocoders::google = GlobalConfig.google_geo_key
     
 	# This is your username and password for geocoder.us.
 	# To use the free service, the value can be set to nil or false.  For 

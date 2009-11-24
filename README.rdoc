@@ -6,15 +6,32 @@ Add profiles to muck users.  This implements a photo for users as well as a prop
 Muck profile relies upon the muck-engine and muck-users gems as well as paperclip.  Add the following lines to your environment.rb file:
 
   config.gem "authlogic"
-  config.gem "binarylogic-searchlogic", :lib => 'searchlogic', :source  => 'http://gems.github.com', :version => '~> 2.0.0'
+  config.gem "searchlogic"
   config.gem "bcrypt-ruby", :lib => "bcrypt"
-  config.gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => "http://gems.github.com"
+  config.gem 'paperclip'
   config.gem 'muck-engine', :lib => 'muck_engine'
   config.gem 'muck-users', :lib => 'muck_users'
   config.gem 'muck-profiles', :lib => 'muck_profiles'
+  config.gem 'geokit'
 
 Next run rake gems:install
 
+MuckProfiles uses geokit to determine a users location and to make it possible to find users that are within a given proximity.
+
+Install the GeoKit Rails Plugin:
+
+  script/plugin install git://github.com/andre/geokit-rails.git
+
+Be sure to get api keys from Google an Yahoo.  Instructions for doing so can be found in config/initializers/geokit_config.rb after installing the plugin.  We recommend moving the keys into
+global_config.yml:
+
+Change the lines in config/initializers/geokit_config.rb to:
+  Geokit::Geocoders::yahoo = GlobalConfig.yahoo_geo_key
+  Geokit::Geocoders::google = GlobalConfig.google_geo_key
+
+Put this in global_config.yml:
+  google_geo_key: 'some key'
+  yahoo_geo_key: 'some key'
 
 == Usage
 Create a model called profile.rb and add 'acts_as_muck_profile'.  This mixes in the muck profile functionality but also permits further customization of the profile in your application.

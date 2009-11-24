@@ -11,6 +11,8 @@ module ActiveRecord
 
           belongs_to :user
           
+          acts_as_mappable
+          
           has_attached_file :photo, 
                             :styles => { :medium => "300x300>",
                                          :thumb => "100x100>",
