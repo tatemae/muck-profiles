@@ -58,4 +58,55 @@ Your user model will now appear to have a 'photo' which is delegated to the prof
 
   @user.photo # returns a photo object from paperclip
 
+=== Profile Attributes
+The profile comes preconfigured with a basic set of common profile options.  It is easy to add new fields.  Simply add the fields to the profile using a migration:
+
+  class AddMoreFieldsToProfiles < ActiveRecord::Migration
+    def self.up
+      add_column :profiles, :occupation, :string
+      add_column :profiles, :gender, :string
+      add_column :profiles, :birthday, :datetime
+      add_column :profiles, :company, :string
+      add_column :profiles, :zip, :string
+      add_column :profiles, :mobile_phone, :string
+      add_column :profiles, :home_phone, :string
+      add_column :profiles, :alumni_of, :string
+      add_column :profiles, :relationship_status, :string
+    end
+
+    def self.down
+      add_column :profiles, :occupation
+      add_column :profiles, :gender
+      add_column :profiles, :birthday
+      add_column :profiles, :company
+      add_column :profiles, :zip
+      add_column :profiles, :mobile_phone
+      add_column :profiles, :home_phone
+      add_column :profiles, :alumni_of
+      add_column :profiles, :relationship_status
+    end
+  end
+
+
+Next create a new views/profiles/edit.html.erb file.  The built in file is very basic and makes it easy to add additional fields.  The 'profile_form' method will
+create form elements for the built in fields.  Add extra fields after that.
+
+  <div id="edit_content" class="span-24 colborder column">
+    <%= output_errors(t('muck.profiles.problem_editing_profile'), {:class => 'help-box'}, @profile) %>
+    <% profile_form(@profile) do |f| -%>
+      <%# can add form fields as desired here -%>
+    <% end -%>
+  </div>
+
+Last create view/profiles/show.html.erb.  There is a built in show page however it is assumed that most applications will implement a custom show page to hightlight
+the focus of the system.
+
+  <div class="span-24 colborder column">
+    <%= icon @user, :thumb %>
+    <p><%= @user.full_name %></p>
+    <p><%= link_to t('muck.profiles.edit_profile'), edit_user_profile_path(@user) if @profile.can_edit?(current_user) %></p>
+    <!-- Add more fields and customize the profile. -->
+  </div>
+
+
 Copyright (c) 2009 Tatemae, released under the MIT license

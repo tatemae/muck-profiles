@@ -10,6 +10,9 @@ module ActiveRecord
         def acts_as_muck_profile(options = {})
 
           belongs_to :user
+          belongs_to :state
+          belongs_to :country
+          belongs_to :language
           
           acts_as_mappable
           
@@ -45,16 +48,18 @@ module ActiveRecord
         end
         
         def after_save
-          debugger
-          if GlobalConfig.enable_guess_location && self.user.current_login_ip
+          if true # GlobalConfig.enable_guess_location && self.user.current_login_ip
+            self.user.current_login_ip = '67.161.250.253'
             location = Geokit::Geocoders::MultiGeocoder.geocode(self.user.current_login_ip)
-            state = State.find_by_()
-            country = Country.find_by  ()
+            state = State.find_by_abbreviation(location.state)
+            country = Country.find_by_abbreviation(location.country)
             self.update_attributes(
               :location => "#{location.city}, #{location.state || location.province} #{location.country_code}",
               :lat => location.lat,
               :lng => location.lng,
-              :city => location.city)
+              :city => location.city,
+              :state => state,
+              :country => country)
           end
         end
         
