@@ -44,6 +44,20 @@ module ActiveRecord
           self.user_id == user.id || user.admin?
         end
         
+        def after_save
+          debugger
+          if GlobalConfig.enable_guess_location && self.user.current_login_ip
+            location = Geokit::Geocoders::MultiGeocoder.geocode(self.user.current_login_ip)
+            state = State.find_by_()
+            country = Country.find_by  ()
+            self.update_attributes(
+              :location => "#{location.city}, #{location.state || location.province} #{location.country_code}",
+              :lat => location.lat,
+              :lng => location.lng,
+              :city => location.city)
+          end
+        end
+        
       end
 
     end

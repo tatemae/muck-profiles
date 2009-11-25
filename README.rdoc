@@ -30,9 +30,12 @@ Change the lines in config/initializers/geokit_config.rb to:
   Geokit::Geocoders::google = GlobalConfig.google_geo_key
 
 Put this in global_config.yml:
-  google_geo_key: 'some key'
-  yahoo_geo_key: 'some key'
+  google_geo_key: 'some key'  # API key for Google.  Get it here: http://www.google.com/apis/maps/signup.html
+  yahoo_geo_key: 'some key'   # API key for Yahoo.  Get it here: http://developer.yahoo.com/faq/index.html#appid
 
+# Profile configuration
+  enable_guess_location: true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
+  
 == Usage
 Create a model called profile.rb and add 'acts_as_muck_profile'.  This mixes in the muck profile functionality but also permits further customization of the profile in your application.
 

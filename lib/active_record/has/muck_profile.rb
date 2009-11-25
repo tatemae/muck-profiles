@@ -28,8 +28,6 @@ module ActiveRecord
       # All the methods available to a record that has had <tt>acts_as_muck_profile</tt> specified.
       module InstanceMethods
         
-        
-        
       end
 
     end
