@@ -108,5 +108,36 @@ the focus of the system.
     <!-- Add more fields and customize the profile. -->
   </div>
 
+It's important to sanitize user input. If you add fields to the profile then be sure to prevent cross site scripting.  Override the 'sanitize_attributes' method 
+in your model and add your new fields.  Note that you can also override 'sanitize_level' to determine how sanitization occurs.
 
+  # Sanitize content before saving.  This prevents XSS attacks and other malicious html.
+  def sanitize_attributes
+    if self.sanitize_level
+      self.about = Sanitize.clean(self.about, self.sanitize_level)
+      self.location = Sanitize.clean(self.location, self.sanitize_level)
+      # add your fields
+    end
+  end
+
+  # Override this method to control sanitization levels.
+  # Currently a user who is an admin will not have their content sanitized.  A user
+  # in any role 'editor', 'manager', or 'contributor' will be given the 'RELAXED' settings
+  # while all other users will get 'BASIC'.
+  #
+  # Options are from sanitze:
+  # nil - no sanitize
+  # Sanitize::Config::RELAXED
+  # Sanitize::Config::BASIC
+  # Sanitize::Config::RESTRICTED
+  # for more details see: http://rgrove.github.com/sanitize/
+  def sanitize_level
+    return Sanitize::Config::BASIC if self.user.nil?
+    return nil if self.user.admin?
+    return Sanitize::Config::RELAXED if self.user.any_role?('editor', 'manager', 'contributor')
+    Sanitize::Config::BASIC
+  end
+  
+  
+  
 Copyright (c) 2009 Tatemae, released under the MIT license

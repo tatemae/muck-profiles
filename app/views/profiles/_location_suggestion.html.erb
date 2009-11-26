@@ -1,0 +1,11 @@
+<div class="location-suggestion">
+  <%= I18n.t('muck.profiles.location_suggestion', readable_location(location)) %>
+  <a href="#" id="set_<#=field_id%>"><%=I18n.t('muck.profiles.click_to_set')%></a>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery("#set_<#=field_id%>").click(function() {
+		jQuery("#<#=field_id%>").val("<%=readable_location(location))%>");
+	});
+});
+</script>

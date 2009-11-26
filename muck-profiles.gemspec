@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2009-11-24}
+  s.date = %q{2009-11-25}
   s.description = %q{Profile engine for the muck system.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -33,6 +33,8 @@ Gem::Specification.new do |s|
      "app/views/profiles/show.html.erb",
      "config/muck_profiles_routes.rb",
      "db/migrate/20090512013727_create_profiles.rb",
+     "db/migrate/20091124203137_add_location_to_profiles.rb",
+     "db/migrate/20091124205819_add_fields_to_profiles.rb",
      "install.rb",
      "lib/active_record/acts/muck_profile.rb",
      "lib/active_record/has/muck_profile.rb",
