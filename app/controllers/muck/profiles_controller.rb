@@ -1,8 +1,6 @@
 class Muck::ProfilesController < ApplicationController
   unloadable
   
-  geocode_ip_address
-  
   before_filter :setup_user, :only => [:show, :edit]
   
   def index
