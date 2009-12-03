@@ -70,8 +70,8 @@ module ActiveRecord
         # Sanitize content before saving.  This prevent XSS attacks and other malicious html.
         def sanitize_attributes
           if self.sanitize_level
-            self.about = Sanitize.clean(self.about, self.sanitize_level)
-            self.location = Sanitize.clean(self.location, self.sanitize_level)
+            self.about = Sanitize.clean(self.about, self.sanitize_level) unless self.about.empty?
+            self.location = Sanitize.clean(self.location, self.sanitize_level) unless self.location.empty?
           end
         end
         
