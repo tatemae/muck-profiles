@@ -12,8 +12,7 @@ class Admin::Muck::ProfilesControllerTest < ActionController::TestCase
       activate_authlogic
       login_as @user
     end
-
-    should_require_role(:admin, '/login', :edit)
+    should_require_role('admin', :redirect_url => '/login', :edit => :get)
   end
 
   context "logged in as admin" do
