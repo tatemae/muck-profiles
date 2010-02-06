@@ -1,7 +1,7 @@
 namespace :muck do
 
   def muck_gems
-    ['babelphish', 'uploader', 'muck-engine', 'muck-users']
+    ['uploader', 'muck-engine', 'muck-users', 'overlord', 'muck-solr','muck-raker','muck-shares']
   end
 
 end

@@ -1,4 +1,4 @@
-RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 require File.join(File.dirname(__FILE__), 'boot')
 
@@ -22,7 +22,11 @@ Rails::Initializer.run do |config|
   config.gem 'will_paginate'
   config.gem "bcrypt-ruby", :lib => "bcrypt"
   config.gem "paperclip"
+  config.gem "overlord"
+  config.gem "uploader"
   config.gem "muck-engine", :lib => 'muck_engine'
   config.gem "muck-users", :lib => 'muck_users'
+  config.gem "muck-shares", :lib => 'muck_shares'
+  config.gem 'muck-solr', :lib => 'acts_as_solr'
   config.plugin_locators << TestGemLocator
 end

@@ -59,7 +59,12 @@ begin
     gemspec.add_dependency "geokit"
     gemspec.add_dependency "paperclip"
     gemspec.add_dependency "sanitize"
+    gemspec.add_dependency "uploader"
+    gemspec.add_dependency "muck-solr"
+    gemspec.add_dependency "muck-shares"
+    gemspec.add_dependency "muck-raker"
   end
+   
   Jeweler::RubyforgeTasks.new do |rubyforge|
     rubyforge.doc_task = "rdoc"
   end

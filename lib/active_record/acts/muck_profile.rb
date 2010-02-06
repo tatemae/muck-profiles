@@ -8,7 +8,17 @@ module ActiveRecord
       module ClassMethods
 
         def acts_as_muck_profile(options = {})
-
+          
+          default_options = { 
+            :enable_solr => false,
+            :policy => { :public => [:login, :first_name, :last_name, :about],
+                         :authenticated => [:location, :city, :state_id, :country_id, :language_id],
+                         :friends => [:email],
+                         :private => [] }
+          }
+          
+          options = default_options.merge(options)
+          
           belongs_to :user
           belongs_to :state
           belongs_to :country
@@ -24,6 +34,31 @@ module ActiveRecord
                             :default_url => "/images/profile_default.jpg"
 
           before_save :sanitize_attributes
+
+          delegate :email, :to => :user
+          delegate :login, :to => :user
+          delegate :first_name, :to => :user
+          delegate :last_name, :to => :user
+          
+          if options[:enable_solr]
+            fields = {}
+            options[:policy].keys.each do |key|
+              field_name = "#{key}_fields"
+              fields[field_name.to_sym] = 'string'
+              # Setup a method for each key in the policy that can generate a string of all the fields
+              # associated with that key.  acts_as_solr will call this method.
+              instance_eval do
+                define_method field_name do
+                  options[:policy][key].collect{ |attribute| self.send(attribute) }.join(' ')
+                end
+              end
+            end
+            write_inheritable_hash(:solr_fields, fields)
+            write_inheritable_hash(:default_policy, options[:policy])
+
+            require 'acts_as_solr'
+            acts_as_solr(:fields => [ fields ], :multi_core => true, :default_core => 'en')
+          end
 
           class_eval <<-EOV
             attr_protected :created_at, :updated_at, :photo_file_name, :photo_content_type, :photo_file_size

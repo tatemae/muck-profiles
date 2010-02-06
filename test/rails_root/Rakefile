@@ -12,4 +12,7 @@ require 'tasks/rails'
 require 'muck_engine/tasks'
 require 'muck_users/tasks'
 require 'muck_profiles/tasks'
-
+require 'muck_raker/tasks'
+require 'muck_shares/tasks'
+require 'acts_as_solr/tasks'
+require 'uploader/tasks'

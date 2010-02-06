@@ -58,6 +58,38 @@ Your user model will now appear to have a 'photo' which is delegated to the prof
 
   @user.photo # returns a photo object from paperclip
 
+=== Acts as Solr
+
+Add the following to global_config.yml
+  profile_enable_solr: true # This enables or disables acts as solr for profiles.
+  
+If you enable acts as solr you'll also want to specify a default policy.  This policy is used to determine which fields are public and private.
+The default policy looks like this:
+
+  :policy => { :public => [:login, :first_name, :last_name, :about],
+               :authenticated => [:location, :city, :state_id, :country_id, :language_id],
+               :friends => [:email],
+               :private => [] }
+
+If you add attributes to the profile as show below then you will want to specify which fields fall into each privacy setting.  Note that it is also
+possible to add new privacy levels simply by adding new values to the hash.  For example:
+
+  :policy => { :public => [:login, :first_name, :last_name, :about],
+               :authenticated => [:location, :city, :state_id, :country_id, :language_id],
+               :friends => [:email],
+               :private => [],
+               :instructors => [:grades] }
+
+For each top level key a method will be auto generated that returns the values from each attribute concatenated together.
+Assuming we have a profile with fields populated calling each method might return something like this:
+  
+  @profile.public_fields         # returns 'testguy test guy I am the test guy'
+  @profile.authenticated_fields  # returns 'somewhere USA English'
+  @profile.friends_fields        # returns 'test@example.com'
+  @profile.private_fields        # returns ' '
+
+Solr will index these fields and then permit you to search based on each privacy level.
+
 === Profile Attributes
 The profile comes preconfigured with a basic set of common profile options.  It is easy to add new fields.  Simply add the fields to the profile using a migration:
 

@@ -27,3 +27,4 @@ rdoc
 pkg
 pkg/*
 log/*
+solr_indexes
