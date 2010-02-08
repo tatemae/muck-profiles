@@ -57,7 +57,7 @@ module ActiveRecord
             write_inheritable_hash(:default_policy, options[:policy])
 
             require 'acts_as_solr'
-            acts_as_solr(:fields => [ fields ], :multi_core => true, :default_core => 'en')
+            acts_as_solr( { :fields => [ fields ] }, { :multi_core => true, :default_core => 'en' })
           end
 
           class_eval <<-EOV
