@@ -44,7 +44,7 @@ module ActiveRecord
             fields = {}
             options[:policy].keys.each do |key|
               field_name = "#{key}_fields"
-              fields[field_name.to_sym] = 'string'
+              fields[field_name.to_sym] = :string
               # Setup a method for each key in the policy that can generate a string of all the fields
               # associated with that key.  acts_as_solr will call this method.
               instance_eval do
