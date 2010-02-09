@@ -13,8 +13,6 @@
 #  lat                :decimal(15, 10)
 #  lng                :decimal(15, 10)
 #  about              :text
-#  first_name         :string(255)
-#  last_name          :string(255)
 #  city               :string(255)
 #  state_id           :integer(4)
 #  country_id         :integer(4)

@@ -39,12 +39,14 @@ module ActiveRecord
           delegate :login, :to => :user
           delegate :first_name, :to => :user
           delegate :last_name, :to => :user
-          
+          delegate :display_name, :to => :user
+          delegate :full_name, :to => :user
+
           if options[:enable_solr]
-            fields = {}
+            fields = []
             options[:policy].keys.each do |key|
               field_name = "#{key}_fields"
-              fields[field_name.to_sym] = :string
+              fields << {field_name.to_sym, :text}
               # Setup a method for each key in the policy that can generate a string of all the fields
               # associated with that key.  acts_as_solr will call this method.
               instance_eval do
@@ -53,11 +55,11 @@ module ActiveRecord
                 end
               end
             end
-            write_inheritable_hash(:solr_fields, fields)
+            write_inheritable_array(:solr_fields, fields)
             write_inheritable_hash(:default_policy, options[:policy])
 
             require 'acts_as_solr'
-            acts_as_solr( { :fields => [ fields ] }, { :multi_core => true, :default_core => 'en' })
+            acts_as_solr( {:fields => fields}, {:multi_core => true, :default_core => 'en'})
           end
 
           class_eval <<-EOV
