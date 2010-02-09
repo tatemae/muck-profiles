@@ -10,11 +10,17 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   </head>
   <body>
+    <h1>Muck Profiles</h1>
     <div id="header">
-		  <div id="top-navigation">
-      </div>
+		<div id="top-navigation">
+        <%= link_to("Logout", logout_path) if logged_in? %>
+        <%= link_to("Sign in", login_path) if !logged_in? %>
+        <%= ('| ' + link_to("Sign Up", signup_path)) if !logged_in? %>
+
+        </div>
       <div class="clear"></div>
     </div>
+    <hr/>
     <div id="main">
       <div id="content">
 			<%= yield %>
