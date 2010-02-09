@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   # profiles
-  map.resources :profiles, :controller => 'muck/profiles'
+  map.resources :profiles, :controller => 'muck/profiles', :collection => { :search => :get }
   map.resources :users, :has_one => :profile
 
   # admin

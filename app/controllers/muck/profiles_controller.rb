@@ -11,6 +11,18 @@ class Muck::ProfilesController < ApplicationController
     end
   end
 
+  def search
+    @query = params[:q]
+    @page = (params[:page] || 1).to_i
+    @rows = (params[:rows] || 10).to_i
+    results = Profile.find_by_solr(@query, :limit => @rows, :offset => @rows*(@page-1), :core => 'en')
+    @hit_count = results.total
+    @users = results.results.paginate(:page => @page, :per_page => @rows, :total_entries => @hit_count)
+    respond_to do |format|
+      format.html { render :template => 'profiles/index' }
+    end
+  end
+
   # show a given user's public profile information
   def show
     @profile = @user.profile

@@ -1,3 +1,12 @@
+<% form_tag search_profiles_path, :method => 'GET' do -%>
+    <%= text_field_tag :q, @query || '' %>
+    <input type="submit" value="Search" />
+<% end -%>
+
+<% if !@query.blank? %>
+<div><%= link_to 'Clear query', profiles_path %></div>
+<% end %>
+
 <div id="profiles">
   <%= render :partial => 'profiles/profile_icon', :collection => @users, :as => :user %>
 </div>
