@@ -1,8 +1,0 @@
-<div id="<%= "#{user.dom_id}" %>" class="edit_profile">
-  <% custom_form_for(user, :url => user_profile_path(profile.user), :html => html.merge(:id => "edit-profile-form", :name => 'edit-profile-form', :method => :put, :multipart => true ) ) do |f| -%>
-    <%= capture(f, &block) %>
-    <div id="edit_profile_submit" class="button form-row">
-      <%= f.submit t('muck.general.update') %>
-    </div>
-  <% end %>
-</div>

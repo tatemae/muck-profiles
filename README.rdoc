@@ -124,8 +124,8 @@ Next create a new views/profiles/edit.html.erb file.  The built in file is very 
 create form elements for the built in fields.  Add extra fields after that.
 
   <div id="edit_content" class="span-24 colborder column">
-    <%= output_errors(t('muck.profiles.problem_editing_profile'), {:class => 'help-box'}, @profile) %>
-    <% profile_form(@profile) do |f| -%>
+    <%= output_errors(t('muck.profiles.problem_editing_profile'), {:class => 'help-box'}, @user) %>
+    <% profile_form(@user) do |f| -%>
       <%# can add form fields as desired here -%>
     <% end -%>
   </div>

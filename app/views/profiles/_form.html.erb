@@ -1,10 +1,5 @@
-<div id="<%= "#{profile.dom_id}" %>" class="edit_profile">
-  <% custom_form_for(profile, :url => user_profile_path(profile.user), :html => html.merge(:id => "edit-profile-form", :name => 'edit-profile-form', :method => :put, :multipart => true ) ) do |f| -%>
-    <div id="edit_profile_image">
-      <%#= image_tag profile.photo.url(:thumb) %>
-      <%= icon profile.user, :thumb %>
-      <%= f.file_field :photo, { :label => t('muck.profiles.upload_photo') } %>
-    </div>
+<div id="<%= "#{user.dom_id}" %>" class="edit_profile">
+  <% custom_form_for(user, :url => user_profile_path(user), :html => html.merge(:id => "edit-profile-form", :name => 'edit-profile-form', :method => :put, :multipart => true ) ) do |f| -%>
     <%= capture(f, &block) %>
     <div id="edit_profile_submit" class="button form-row">
       <%= f.submit t('muck.general.update') %>

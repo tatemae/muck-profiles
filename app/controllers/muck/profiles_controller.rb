@@ -38,7 +38,7 @@ class Muck::ProfilesController < ApplicationController
   # and add something similar to the following:
   #    <div id="edit_profile">
   #      <%= output_errors(t('muck.profiles.problem_editing_profile'), {:class => 'help-box'}, @profile) %>
-  #      <% profile_form(@profile) do |f| -%>
+  #      <% profile_form(@user) do |f| -%>
   #        <%# Add custom fields here.  ie %>
   #        <%= f.text_field :custom_thing %>
   #      <% end -%>
@@ -58,9 +58,8 @@ class Muck::ProfilesController < ApplicationController
   
   def update
     @user = User.find(params[:user_id])
-    @profile = @user.profile
     @page_title = t('muck.profiles.edit_profile_title', :name => @user.display_name)
-    @profile.update_attributes!(params[:profile])
+    @user.update_attributes!(params[:user])
     respond_to do |format|
       flash[:notice] = t('muck.profiles.edit_success')
       format.html { redirect_back_or_default edit_user_profile_path(@user) }
