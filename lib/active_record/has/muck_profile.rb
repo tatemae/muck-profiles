@@ -13,6 +13,8 @@ module ActiveRecord
           accepts_nested_attributes_for :profile, :allow_destroy => true 
           after_create {|user| user.create_profile unless user.profile}
           delegate :photo, :to => :profile
+          
+          accepts_nested_attributes_for :profile
            
           include ActiveRecord::Has::MuckProfile::InstanceMethods
           extend ActiveRecord::Has::MuckProfile::SingletonMethods

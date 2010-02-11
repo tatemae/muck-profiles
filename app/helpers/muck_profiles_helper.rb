@@ -9,6 +9,15 @@ module MuckProfilesHelper
     raw_block_to_partial('profiles/form', options.merge(:profile => profile), &block)
   end
   
+  # Renders a user and profile edit form
+  # content:  Optional content object to be edited.
+  # options:  html options for form.  For example:
+  #             :html => {:id => 'a form'}
+  def user_profile_form(user, options = {}, &block)
+    options[:html] = {} if options[:html].nil?
+    raw_block_to_partial('profiles/user_profile_form', options.merge(:user => user), &block)
+  end
+  
   # Outputs a link and text that guesses the user's location using their ip.
   def location_suggestion(field_id)
     geo = Geokit::Geocoders::MultiGeocoder.geocode(request.ip)
