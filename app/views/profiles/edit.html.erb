@@ -9,7 +9,7 @@ location_id = 'location' -%>
     <%= f.text_field :first_name, { :label => t('muck.users.first_name') } %>
     <%= f.text_field :last_name, { :label => t('muck.users.last_name') } %>
     <%= f.text_field :email, { :label => t('muck.users.email') } %>
-    <% fields_for(@user.profile, :builder => MuckCustomFormBuilder) do |pf| %>
+    <% f.fields_for(:profile, :builder => MuckCustomFormBuilder) do |pf| %>
       <div id="edit_profile_image">
         <%= icon @user, :thumb %>
         <%= pf.file_field :photo, { :label => t('muck.profiles.upload_photo') } %>
