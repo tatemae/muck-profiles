@@ -2,11 +2,28 @@
 cs: 
   muck: 
     profiles: 
+      about: O
+      about_help: "Zadejte životopisné informace, které pomohou ostatním dozvědět o své dovednosti, zájmy, atd."
+      click_to_set: "Klepněte na tlačítko pro nastavení tohoto jako vaší lokalitě."
       could_not_find_user: "Nelze najít konkrétního uživatele."
+      country: Země
+      country_help: "Zadejte svůj současný aktuální."
       edit_failure: "Došlo k chybě při aktualizaci vašeho profilu."
       edit_profile: "Edit Profile"
+      edit_profile_title: "Editace profilu {{name}}"
       edit_success: "Úspěšně aktualizován svůj profil"
-      problem_editing_account: "Došlo k problému při aktualizaci vašeho profilu"
+      interests: Zájmy
+      interests_help: "Zadejte čárkami oddělený seznam vašich zájmů. Například: cyklistika, horská cyklistika, šachy, filmy"
+      language: Jazyk
+      language_help: "Zadejte svůj primární jazyk"
+      location: Umístění
+      location_help: "Zadejte umístění. Například: Logan, UT, New York City, NY, atd."
+      location_suggestion: "Myslíme si, že jste v {{location}}."
+      problem_editing_profile: "Došlo k problému při aktualizaci vašeho profilu"
+      skills: Dovednosti
+      skills_help: "Zadejte čárkami oddělený seznam vašich dovedností. Například: Ruby on Rails, PHP, MySQL, fyzika, matematika"
+      state: Stát
+      state_help: "Zadejte svůj stav, pokud je to relevantní pro vaši zemi."
       update_profile: "Upravit profil"
       upload_photo: "Upload fotografie:"
       view_profile: "Zobrazit profil"

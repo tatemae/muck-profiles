@@ -2,11 +2,28 @@
 gl: 
   muck: 
     profiles: 
+      about: Sobre
+      about_help: "Introduza unha información biográfica para axudar a outros a descubrir as súas habilidades, intereses, etc"
+      click_to_set: "Preme aquí para configurar este como a súa localización."
       could_not_find_user: "Non se puido atopar o usuario especificado."
+      country: País
+      country_help: "Introduza o seu curso actual."
       edit_failure: "Houbo un erro ao actualizar o seu perfil."
       edit_profile: "Edit Profile"
+      edit_profile_title: "Edición de perfil para {{name}}"
       edit_success: "Actualizado correctamente o seu perfil"
-      problem_editing_account: "Houbo un problema ao actualizar o seu perfil"
+      interests: Intereses
+      interests_help: "Introduza unha lista pechada por comas dos seus intereses. Por exemplo: ciclismo, mountain bike, xadrez, películas"
+      language: Linguaxe
+      language_help: "Introduza a súa lingua principal"
+      location: Local
+      location_help: "Introduza a súa localización. Por exemplo: Logan, UT, Nova York, NY, etc"
+      location_suggestion: "Nós pensamos que está en {{location}}."
+      problem_editing_profile: "Houbo un problema ao actualizar o seu perfil"
+      skills: Habilidades
+      skills_help: "Introduza unha lista pechada por comas das súas habilidades. Por exemplo: Ruby on Rails, PHP, MySQL, física, matemáticas"
+      state: Estado
+      state_help: "Introduza o seu estado se isto é relevante para o país."
       update_profile: "Update Profile"
       upload_photo: "Cargar unha foto:"
       view_profile: "Ver Perfil"

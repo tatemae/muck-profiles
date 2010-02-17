@@ -2,11 +2,28 @@
 ro: 
   muck: 
     profiles: 
+      about: Despre
+      about_help: "Introduceţi un informaţii biografice pentru a ajuta pe alţii a afla informaţii despre abilităţile dumneavoastră, interese, etc"
+      click_to_set: "Faceţi clic pentru a stabili acest lucru ca locaţia dumneavoastră."
       could_not_find_user: "Nu am putut găsi de utilizator specificat."
+      country: Ţară
+      country_help: "Introduceţi curent dvs. curent."
       edit_failure: "A apărut o eroare în timp ce la actualizarea profilului dvs.."
       edit_profile: "Editare profil"
+      edit_profile_title: "Editare profil pentru {{name}}"
       edit_success: "Actualizat cu succes profilul dvs."
-      problem_editing_account: "Nu a fost o problemă la actualizarea profilului dvs."
+      interests: Interests
+      interests_help: "Introduceţi o virgulă listă delimitată de interesele dumneavoastra. De exemplu: mersul cu bicicleta, mountain bike, sah, filme"
+      language: Limbă
+      language_help: "Introduceţi limba dvs. primară"
+      location: Locaţie
+      location_help: "Introduceţi locaţia dumneavoastră. De exemplu: Logan, UT, New York City, NY, etc"
+      location_suggestion: "Credem că sunteţi în {{location}}."
+      problem_editing_profile: "Nu a fost o problemă la actualizarea profilului dvs."
+      skills: Îndemânări
+      skills_help: "Introduceţi o virgulă listă delimitată de aptitudinile tale. De exemplu: Ruby on Rails, PHP, MySQL, fizica, matematica"
+      state: Afirma
+      state_help: "Introduceţi starea dumneavoastră dacă acest lucru este relevant pentru ţara dumneavoastră."
       update_profile: "Update Profil"
       upload_photo: "Încărcaţi o fotografie:"
       view_profile: "Vezi Profil"

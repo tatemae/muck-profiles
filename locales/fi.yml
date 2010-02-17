@@ -2,11 +2,28 @@
 fi: 
   muck: 
     profiles: 
+      about: Noin
+      about_help: "Anna kertova tieto auttaa muita löytämään tietoa taitojasi, edut, jne."
+      click_to_set: "Klikkaa asettaa tätä sijainnin."
       could_not_find_user: "Ei löytänyt määritelty käyttäjä."
+      country: Maa
+      country_help: "Anna nykyinen nykyisestä."
       edit_failure: "Virhe päivittää profiilin."
       edit_profile: "Edit Profile"
+      edit_profile_title: "Muokkaaminen profiili {{name}}"
       edit_success: "Päivittäminen onnistui profiili"
-      problem_editing_account: "Oli ongelma päivittää profiilisi"
+      interests: Harrastukset
+      interests_help: "Kirjoita pilkuilla eroteltu luettelo kiinnostuksen. Esimerkiksi: pyöräily, maastopyöräily, shakki, elokuvat"
+      language: Kieli
+      language_help: "Anna ensisijainen kieli"
+      location: Sijainti
+      location_help: "Anna sijainti. Esimerkiksi: Logan, UT, New York, NY, jne."
+      location_suggestion: "Mielestämme olet {{location}}."
+      problem_editing_profile: "Oli ongelma päivittää profiilisi"
+      skills: Taidot
+      skills_help: "Kirjoita pilkuilla eroteltu luettelo taitosi. Esimerkiksi: Ruby on Rails, PHP, MySQL, fysiikka, matematiikka"
+      state: Osavaltio
+      state_help: "Anna valtio, jos tämä on merkitystä oman maan."
       update_profile: "Update Profile"
       upload_photo: "Lataa kuva:"
       view_profile: "Näytä profiili"

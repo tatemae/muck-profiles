@@ -2,11 +2,28 @@
 fr: 
   muck: 
     profiles: 
+      about: "À propos de"
+      about_help: "Entrez une notice biographique pour aider les autres à trouver des renseignements sur vos aptitudes, intérêts, etc"
+      click_to_set: "Cliquez pour définir ce que votre emplacement."
       could_not_find_user: "Impossible de trouver l&#39;utilisateur spécifié."
+      country: Pays
+      country_help: "Entrez votre courant actuel."
       edit_failure: "Une erreur s&#39;est produite lors de la mise à jour de votre profil."
       edit_profile: "Modifiez votre profil"
+      edit_profile_title: "Modification du profil de {{name}}"
       edit_success: "Correctement mis à jour votre profil"
-      problem_editing_account: "Il y avait un problème de mise à jour votre profil"
+      interests: "Centres d&#39;intérêt"
+      interests_help: "Entrez une liste délimitée par des virgules de vos intérêts. Par exemple: le cyclisme, le VTT, les échecs, les films"
+      language: Langue
+      language_help: "Entrez votre langue maternelle"
+      location: Emplacement
+      location_help: "Entrez votre emplacement. Par exemple: Logan, UT, New York City, NY, etc"
+      location_suggestion: "Nous pensons que vous êtes dans {{location}}."
+      problem_editing_profile: "Il y avait un problème de mise à jour votre profil"
+      skills: Qualifications
+      skills_help: "Entrez une liste délimitée par des virgules de vos compétences. Par exemple: Ruby on rails, php, mysql, physique, mathématiques"
+      state: État
+      state_help: "Entrez votre état si cela est pertinent pour votre pays."
       update_profile: "Modifier votre profil"
       upload_photo: "Télécharger une photo:"
       view_profile: "Voir le profil"

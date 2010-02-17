@@ -2,11 +2,28 @@
 sq: 
   muck: 
     profiles: 
+      about: Rreth
+      about_help: "Futni një informacion biografik për të ndihmuar të tjerët mësojnë më shumë për aftësitë tuaja, interesat, etj"
+      click_to_set: "Kliko për të vendosur këtë si vendndodhjen tuaj."
       could_not_find_user: "Nuk mund të gjeni përdorues specifikuar."
+      country: Vendi
+      country_help: "Shkruani aktual tuaj aktuale."
       edit_failure: "Një gabim ndodhi freskimit profilin tuaj."
       edit_profile: "Edit Profile"
+      edit_profile_title: "Editing profilin e {{name}}"
       edit_success: "Përditësuar me sukses profilin tuaj"
-      problem_editing_account: "Nuk ishte një problem updating profilin tuaj"
+      interests: Interesat
+      interests_help: "Futni një presje listën e kufizuar të interesave tuaja. Për shembull: çiklizmit, biking malore, shahu, filma"
+      language: Gjuha
+      language_help: "Shkruani gjuhën tuaj kryesor"
+      location: Vendi
+      location_help: "Enter your location. Për shembull: Logan, UT, New York City, NY, etj"
+      location_suggestion: "Ne mendojmë se ju jeni në {{location}}."
+      problem_editing_profile: "Nuk ishte një problem updating profilin tuaj"
+      skills: Aftësitë
+      skills_help: "Futni një presje listën e kufizuar për aftësitë tuaja. Për shembull: Ruby on Rails, PHP, mysql, fizikë, matematikë"
+      state: Shtet
+      state_help: "Shkruani gjendjen tuaj, nëse kjo është e rëndësishme për vendin tuaj."
       update_profile: "Update Profili"
       upload_photo: "Upload a photo:"
       view_profile: Profili

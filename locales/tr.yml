@@ -2,11 +2,28 @@
 tr: 
   muck: 
     profiles: 
+      about: "Ile ilgili"
+      about_help: "Biyografik bilgilerinizi girin başkalarının becerilerini öğrenmek için, ilgi alanları vb"
+      click_to_set: "Tıklayın yer olarak ayarlamak için."
       could_not_find_user: "Belirtilen kullanıcı bulunamadı."
+      country: Ülke
+      country_help: "Geçerli Geçerli girin."
       edit_failure: "Profil güncelleme sırasında bir hata oluştu."
       edit_profile: "Profili Düzenle"
+      edit_profile_title: "{{name}} Için profil düzenleme"
       edit_success: "Başarıyla Profil güncelleme"
-      problem_editing_account: "Bir sorun profil güncellenirken"
+      interests: Hobileri
+      interests_help: "Ilgilerinizi girin virgülle ayrılmış liste. Örneğin: bisiklet, dağ bisikleti, satranç, film"
+      language: Dil
+      language_help: "Birincil dil girin"
+      location: Yer
+      location_help: "Yerinizi girin. Örneğin: Logan, UT, New York, NY, vb"
+      location_suggestion: "Biz sizi {{location}}. think you&#39;re"
+      problem_editing_profile: "Bir sorun profil güncellenirken"
+      skills: Beceriler
+      skills_help: "Yeteneklerinizi girin virgülle ayrılmış liste. Örneğin: raylar, PHP, MySQL, fizik, matematik üzerinde yakut"
+      state: Eyalet
+      state_help: "Sizin devlet bu ülkenize alakalı girin."
       update_profile: "Update Profile"
       upload_photo: "Upload Fotoğraf:"
       view_profile: "Profili Göster"

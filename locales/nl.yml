@@ -2,11 +2,28 @@
 nl: 
   muck: 
     profiles: 
+      about: Over
+      about_help: "Voer een biografische informatie om anderen te helpen vinden over uw vaardigheden, interesses, enz."
+      click_to_set: "Klik om dit als uw locatie."
       could_not_find_user: "Kan niet vinden de opgegeven gebruiker."
+      country: Land
+      country_help: "Geef uw huidige stroom."
       edit_failure: "Er is een fout opgetreden tijdens het bijwerken van je profiel."
       edit_profile: "Edit Profile"
+      edit_profile_title: "Bezig met bewerken van profiel voor {{name}}"
       edit_success: "Succesvol bijgewerkt op je profiel"
-      problem_editing_account: "Er was een probleem bijwerken van uw profiel"
+      interests: Interesses
+      interests_help: "Voer een door komma&#39;s gescheiden lijst van uw belangen. Bijvoorbeeld: fietsen, mountainbiken, schaken, films"
+      language: Taal
+      language_help: "Voer uw primaire taal"
+      location: Locatie
+      location_help: "Voer uw locatie. Bijvoorbeeld: Logan, UT, New York City, NY, enz."
+      location_suggestion: "Wij denken dat je in {{location}}."
+      problem_editing_profile: "Er was een probleem bijwerken van uw profiel"
+      skills: Vaardigheden
+      skills_help: "Voer een door komma&#39;s gescheiden lijst van uw vaardigheden. Bijvoorbeeld: Ruby on Rails, PHP, MySQL, fysica, wiskunde"
+      state: Toestand
+      state_help: "Voer uw staat als dit relevant is voor uw land."
       update_profile: "Update Profile"
       upload_photo: "Upload een foto:"
       view_profile: "Bekijk profiel"

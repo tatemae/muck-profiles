@@ -2,11 +2,28 @@
 ca: 
   muck: 
     profiles: 
+      about: Sobre
+      about_help: "Introduïu una informació biogràfica ajudar a altres a descobrir les seves habilitats, interessos, etc"
+      click_to_set: "Feu clic per establir això com la seva ubicació."
       could_not_find_user: "No s&#39;ha pogut trobar l&#39;usuari especificat."
+      country: País
+      country_help: "Introdueixi la seva actual curs."
       edit_failure: "Va produir un error en actualitzar el seu perfil."
       edit_profile: "Editar perfil"
+      edit_profile_title: "Edició de perfils per {{name}}"
       edit_success: "S&#39;ha actualitzat correctament el teu perfil"
-      problem_editing_account: "Hi ha hagut un problema en actualitzar el teu perfil"
+      interests: Interessos
+      interests_help: "Escriviu una llista delimitada per comes dels seus interessos. Per exemple: ciclisme, ciclisme de muntanya, escacs, el cinema"
+      language: Idioma
+      language_help: "Introdueixi el seu idioma principal"
+      location: Ubicació
+      location_help: "Introdueixi la seva ubicació. Per exemple: Logan, UT, Nova York, NY, etc"
+      location_suggestion: "Creiem que vostè està en {{location}}."
+      problem_editing_profile: "Hi ha hagut un problema en actualitzar el teu perfil"
+      skills: Habilitats
+      skills_help: "Escriviu una llista delimitada per comes de les seves habilitats. Per exemple: Ruby on Rails, php, mysql, física, matemàtiques"
+      state: Estat
+      state_help: "Introdueixi el seu estat si això és rellevant per al seu país."
       update_profile: "Actualització perfil"
       upload_photo: "Pujar una foto:"
       view_profile: "Veure perfil"

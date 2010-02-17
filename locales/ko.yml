@@ -2,11 +2,28 @@
 ko: 
   muck: 
     profiles: 
+      about: 정보
+      about_help: "전기, 다른 분들에게도 정보를 입력하여 능력에 대해 쉽게 찾을 수 있도록, 관심 분야, 등"
+      click_to_set: "를 클릭하여 위치로 설정할 수있습니다."
       could_not_find_user: "지정한 사용자를 찾을 수없습니다."
+      country: 국가
+      country_help: "귀하의 전류를 입력합니다."
       edit_failure: "귀하의 프로필을 업데이 트하는 동안 오류가 발생했습니다."
       edit_profile: "프로필 수정"
+      edit_profile_title: "{{name}}에 대한 프로필 편집"
       edit_success: "성공적으로 귀하의 프로필을 업데이 트"
-      problem_editing_account: "거기에 문제가 귀하의 프로필을 업데이 트했습니다"
+      interests: 취미
+      interests_help: "여러분의 관심사 중 하나를 입력 쉼표로 구분된 목록입니다. 예를 들면 : 사이클, 산악 자전거, 체스, 영화"
+      language: 언어
+      language_help: "귀하의 기본 언어를 입력하십시오"
+      location: 위치
+      location_help: "귀하의 위치를 입력합니다. 예를 들면 : 로건, 유타, 뉴욕시, 뉴욕 등"
+      location_suggestion: "우리는 당신의 생각 {{location}}."
+      problem_editing_profile: "거기에 문제가 귀하의 프로필을 업데이 트했습니다"
+      skills: 기술
+      skills_help: "귀하의 기술 중 하나를 입력 쉼표로 구분된 목록입니다. 예를 들면 : 레일로, PHP, MySQL은, 물리학, 수학 루비"
+      state: 상태
+      state_help: "귀하의 국가이 당신의 국가에 적합 입력합니다."
       update_profile: "프로필 업데이트"
       upload_photo: "업로드 사진 :"
       view_profile: 프로필보기

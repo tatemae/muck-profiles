@@ -2,11 +2,28 @@
 vi: 
   muck: 
     profiles: 
+      about: Về
+      about_help: "Nhập thông tin về tiểu sử để giúp người khác tìm hiểu về các kỹ năng của bạn, lợi ích, vv"
+      click_to_set: "Nhấn vào đây để đặt này là địa điểm của bạn."
       could_not_find_user: "Không tìm thấy người sử dụng chỉ định."
+      country: "Đất nước"
+      country_help: "Nhập hiện hành hiện tại của bạn."
       edit_failure: "Đã xảy ra lỗi trong khi cập nhật tiểu sử của bạn."
       edit_profile: "Edit Profile"
+      edit_profile_title: "Chỉnh sửa hồ sơ cho {{name}}"
       edit_success: "Cập nhật thành hồ sơ của bạn"
-      problem_editing_account: "Có vấn đề cập nhật hồ sơ của bạn"
+      interests: "Lợi ích"
+      interests_help: "Nhập một dấu phẩy phân cách danh sách các lợi ích của bạn. Ví dụ: xe đạp, đi xe đạp núi, cờ vua, phim ảnh"
+      language: "Ngôn ngữ"
+      language_help: "Nhập ngôn ngữ chính của bạn"
+      location: "Vị trí"
+      location_help: "Nhập địa điểm của bạn. Ví dụ: Logan, UT, thành phố New York, NY, vv"
+      location_suggestion: "Chúng tôi nghĩ rằng bạn đang ở {{location}}."
+      problem_editing_profile: "Có vấn đề cập nhật hồ sơ của bạn"
+      skills: "Những kỹ năng"
+      skills_help: "Nhập một dấu phẩy phân cách danh sách các kỹ năng của bạn. Ví dụ: ruby trên ray, php, mysql, vật lý, toán học"
+      state: Nói
+      state_help: "Nhập bang của bạn nếu điều này là có liên quan đến quốc gia của bạn."
       update_profile: "Cập nhật thông tin"
       upload_photo: "Tải lên một hình ảnh:"
       view_profile: "Xem Hồ Sơ"

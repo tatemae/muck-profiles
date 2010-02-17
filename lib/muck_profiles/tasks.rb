@@ -12,9 +12,9 @@ module MuckProfiles
     def define
       
       namespace :muck do
-        namespace :profiles do
+        namespace :sync do
           desc "Sync required files from profiles."
-          task :sync do
+          task :profiles do
             path = File.join(File.dirname(__FILE__), *%w[.. ..])
             system "rsync -ruv #{path}/db ."
           end
