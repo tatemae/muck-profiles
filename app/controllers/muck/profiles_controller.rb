@@ -58,6 +58,7 @@ class Muck::ProfilesController < ApplicationController
   
   def update
     @user = User.find(params[:user_id])
+    @profile = @user.profile
     @page_title = t('muck.profiles.edit_profile_title', :name => @user.display_name)
     @user.update_attributes!(params[:user])
     respond_to do |format|
