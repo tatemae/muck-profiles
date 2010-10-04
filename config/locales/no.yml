@@ -1,0 +1,30 @@
+--- 
+? "no"
+: 
+  muck: 
+    profiles: 
+      about: Om
+      about_help: "Skriv inn et biografisk informasjon for å hjelpe andre å finne ut om dine ferdigheter, interesser, etc."
+      click_to_set: "Klikk for å angi dette som du befinner deg."
+      could_not_find_user: "Kunne ikke finne den angitte brukeren."
+      country: Land
+      country_help: "Skriv inn din nåværende gjeldende."
+      edit_failure: "Det oppstod en feil under oppdatering av profilen din."
+      edit_profile: "Edit Profile"
+      edit_profile_title: "Redigere profil for %{name}"
+      edit_success: "Oppdatert din profil"
+      interests: Interesser
+      interests_help: "Skriv inn en komma separert liste over dine interesser. For eksempel: sykling, terrengsykling, sjakk, filmer"
+      language: Språk
+      language_help: "Skriv inn din primære språk"
+      location: Beliggenhet
+      location_help: "Skriv din posisjon. For eksempel: Logan, UT, New York City, NY, etc"
+      location_suggestion: "Vi tror du er i %{location}."
+      problem_editing_profile: "Det oppstod et problem å oppdatere din profil"
+      skills: Ferdigheter
+      skills_help: "Skriv inn en komma separert liste over dine ferdigheter. For eksempel: Ruby on Rails, php, mysql, fysikk, matte"
+      state: Stat
+      state_help: "Skriv din tilstand hvis dette er relevant for ditt land."
+      update_profile: "Oppdater profil"
+      upload_photo: "Last opp bilde:"
+      view_profile: "Vis profil"

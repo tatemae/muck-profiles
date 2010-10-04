@@ -1,0 +1,29 @@
+--- 
+sv: 
+  muck: 
+    profiles: 
+      about: Om
+      about_help: "Ange en biografisk information för att hjälpa andra få reda på dina färdigheter, intressen etc."
+      click_to_set: "Klicka för att ställa detta som du befinner dig."
+      could_not_find_user: "Kunde inte hitta den angivna användaren."
+      country: Land
+      country_help: "Skriv in din nuvarande aktuella."
+      edit_failure: "Ett fel uppstod när du uppdaterar din profil."
+      edit_profile: "Redigera profil"
+      edit_profile_title: "Redigera profil för %{name}"
+      edit_success: "Har uppdaterat din profil"
+      interests: Intressen
+      interests_help: "Ange en kommaseparerad lista med dina intressen. Till exempel: cykling, mountainbike, schack, filmer"
+      language: Språk
+      language_help: "Ange ditt primära språk"
+      location: Läge
+      location_help: "Ange din plats. Till exempel: Logan, UT, New York, NY, etc"
+      location_suggestion: "Vi tror att du är i %{location}."
+      problem_editing_profile: "Det uppstod ett problem att uppdatera din profil"
+      skills: Färdigheter
+      skills_help: "Ange en kommaseparerad lista över dina kunskaper. Till exempel: Ruby on Rails, PHP, MySQL, fysik, matematik"
+      state: Staten
+      state_help: "Ange ditt tillstånd om detta är relevant för ditt land."
+      update_profile: "Uppdatera profil"
+      upload_photo: "Ladda upp en bild:"
+      view_profile: "Visa profil"

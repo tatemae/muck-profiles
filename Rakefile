@@ -2,16 +2,8 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
-desc 'Default: run unit tests.'
-task :default => :test
-
-desc 'Test the muck_profiles plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test/rails_root/test'
-  t.pattern = 'test/rails_root/test/**/*_test.rb'
-  t.verbose = true
-end
+desc 'Default: run tests.'
+task :default => :spec
 
 begin
   require 'rcov/rcovtask'
@@ -40,7 +32,7 @@ end
 
 desc 'Translate this gem'
 task :translate do
-  file = File.join(File.dirname(__FILE__), 'locales', 'en.yml')
+  file = File.join(File.dirname(__FILE__), 'config', 'locales', 'en.yml')
   system("babelphish -o -y #{file}")
 end
 

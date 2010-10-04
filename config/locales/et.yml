@@ -1,0 +1,29 @@
+--- 
+et: 
+  muck: 
+    profiles: 
+      about: Andmeid
+      about_help: "Enter biograafilised andmed, et teisi aidata teada oma oskusi, huvisid jne"
+      click_to_set: "Kliki määrata seda, kui teie asukoht."
+      could_not_find_user: "Ei leia kindlaksmääratud kasutajale."
+      country: Riik
+      country_help: "Sisestage kehtiv voolu."
+      edit_failure: "Viga Sinu profiili uuendamisel."
+      edit_profile: "Muuda profiili"
+      edit_profile_title: "Redigeerimisel profiil %{name}"
+      edit_success: "Edukalt uuendatud Sinu profiili"
+      interests: Huvid
+      interests_help: "Sisesta komadega eraldatud nimekiri teie huvidest. Näiteks: jalgrattasõit, mountain biking, male, filmid"
+      language: Keel
+      language_help: "Sisesta oma peamine keel"
+      location: Asukoht
+      location_help: "Sisestage oma asukohta. Näiteks: Logan, UT, New York City, NY, etc"
+      location_suggestion: "Me arvame, et oled %{location}."
+      problem_editing_profile: "Seal oli probleem Sinu profiili uuendamisel"
+      skills: Oskused
+      skills_help: "Enter komaga eraldatud nimekiri teie oskusi. Näiteks: Ruby on Rails, PHP, MySQL, füüsika, matemaatika"
+      state: Riik
+      state_help: "Sisesta oma riigis, kui see on asjakohane, et oma riigis."
+      update_profile: "Update Profile"
+      upload_photo: "Lae üles foto:"
+      view_profile: "Vaata profiili"

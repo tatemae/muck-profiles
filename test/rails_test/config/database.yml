@@ -1,0 +1,23 @@
+development:
+  adapter: mysql
+  database: muck_profiles_development
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+
+test:
+  adapter: mysql
+  database: muck_profiles_test
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+
+cucumber:
+  adapter: mysql
+  database: muck_profiles_cucumber
+  username: root
+  password:
+  host: localhost
+  encoding: utf8

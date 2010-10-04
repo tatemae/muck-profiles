@@ -1,0 +1,29 @@
+--- 
+hr: 
+  muck: 
+    profiles: 
+      about: O
+      about_help: "Unesite biografske podatke kako bi pomogli drugima saznati o vašim sposobnostima, interesima, itd."
+      click_to_set: "Kliknite da postavite ovo kao svoju lokaciju."
+      could_not_find_user: "Ne mogu pronaći određenog korisnika."
+      country: Zemlji
+      country_help: "Unesite Vaše trenutne struje."
+      edit_failure: "Došlo je do pogreške pri ažuriranju svoj profil."
+      edit_profile: "Uredi profil"
+      edit_profile_title: "Uređivanje profila za %{name}"
+      edit_success: "Uspješno obnovljeno svoj profil"
+      interests: Zanimljivosti
+      interests_help: "Unesite zarez razgraničeni popis svojih interesa. Na primjer: biciklizam, brdski biciklizam, šah, filmovi"
+      language: Jezik
+      language_help: "Unesite svoj primarni jezik"
+      location: "Sjediste, mjesto poslovanja"
+      location_help: "Unesite svoju lokaciju. Na primjer: Logan, UT, New York City, NY, itd"
+      location_suggestion: "Mislimo da ste u %{location}."
+      problem_editing_profile: "Došlo je do problema u ažuriranju profila"
+      skills: Vještine
+      skills_help: "Unesite zarez razgraničeni popis svoje vještine. Na primjer: Ruby on Rails, PHP, MySQL, fizike, matematike"
+      state: Države
+      state_help: "Unesite Vaše stanje, ako je to relevantno za vašu zemlju."
+      update_profile: "Update Profile"
+      upload_photo: "Upload fotografija:"
+      view_profile: "Vidi profil"

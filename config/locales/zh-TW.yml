@@ -1,0 +1,29 @@
+--- 
+zh-TW: 
+  muck: 
+    profiles: 
+      about: 關於
+      about_help: 輸入傳記資料，幫助他人了解你的技能，興趣等
+      click_to_set: 點擊設置此為您的位置。
+      could_not_find_user: 找不到指定的用戶。
+      country: 國家
+      country_help: 輸入您的電流。
+      edit_failure: 發生錯誤時您更新資料。
+      edit_profile: 編輯個人資料
+      edit_profile_title: "編輯配置文件%{name}"
+      edit_success: 成功更新您的個人資料
+      interests: 愛好
+      interests_help: 輸入一個逗號分隔的列表，你的利益。例如：自行車，山地自行車，象棋，電影
+      language: 語言
+      language_help: 輸入您的主要語言
+      location: 地點
+      location_help: 輸入您的位置。例如：洛根，UT斯達康，紐約市，紐約州等
+      location_suggestion: "我們認為你在%{location}."
+      problem_editing_profile: 有一個問題更新您的個人資料
+      skills: 技巧
+      skills_help: "輸入一個逗號分隔的列表，你的技能。例如：Ruby on Rails的，PHP，MySQL和物理，數學"
+      state: 國家
+      state_help: 輸入您的狀態，如果這涉及到你的國家。
+      update_profile: 更新個人資料
+      upload_photo: 上傳照片：
+      view_profile: 查看專頁

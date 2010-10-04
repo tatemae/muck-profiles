@@ -1,0 +1,29 @@
+--- 
+ja: 
+  muck: 
+    profiles: 
+      about: について
+      about_help: 他の人があなたのスキル、興味などを知るために伝記的な情報を入力してください
+      click_to_set: "あなたの場所としてこれを設定する]をクリックします。"
+      could_not_find_user: 指定されたユーザーを見つけることができませんでした。
+      country: 国
+      country_help: あなたの現在の電流を入力してください。
+      edit_failure: プロファイルの更新中にエラーが発生しました。
+      edit_profile: プロフィールを編集
+      edit_profile_title: "%{name}の編集プロファイル"
+      edit_success: 正常にプロフィールを更新しました
+      interests: 興味
+      interests_help: カンマ区切りには、あなたの興味の区切りのリストを入力してください。サイクリング、マウンテンバイク、チェス、映画：たとえば、
+      language: 言語
+      language_help: 主要言語を入力してください
+      location: ロケーション
+      location_help: あなたの場所を入力してください。たとえば：ローガン、ユタ州、ニューヨーク、ニューヨークなど
+      location_suggestion: "私たちはあなたのだと思う%{location}."
+      problem_editing_profile: あなたのプロファイルを更新する問題があった
+      skills: スキル
+      skills_help: "カンマであなたのスキルの区切りのリストを入力してください。例：Ruby on Railsは、PHP、MySQLは、物理学、数学"
+      state: 状態
+      state_help: これはあなたの国に関連している場合、あなたの状態を入力してください。
+      update_profile: プロフィールを更新
+      upload_photo: 写真のアップロード：
+      view_profile: プロフィール

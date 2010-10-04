@@ -1,0 +1,29 @@
+--- 
+pt-PT: 
+  muck: 
+    profiles: 
+      about: Sobre
+      about_help: "Digite uma informação biográfica para ajudar os outros descobrir suas habilidades, interesses, etc"
+      click_to_set: "Clique aqui para definir isto como a sua localização."
+      could_not_find_user: "Não foi possível localizar o usuário especificado."
+      country: País
+      country_help: "Digite seu atual curso."
+      edit_failure: "Ocorreu um erro ao atualizar seu perfil."
+      edit_profile: "Editar perfil"
+      edit_profile_title: "Editar perfil para %{name}"
+      edit_success: "Atualizado com sucesso o seu perfil"
+      interests: Interesses
+      interests_help: "Digite uma lista delimitada por vírgulas de seus interesses. Por exemplo: ciclismo, mountain bike, xadrez, filmes"
+      language: Idioma
+      language_help: "Insira o seu idioma principal"
+      location: Localização
+      location_help: "Digite a sua localização. Por exemplo: Logan, UT, New York, NY, etc"
+      location_suggestion: "Nós pensamos que você está em %{location}."
+      problem_editing_profile: "Houve um problema atualizando seu perfil"
+      skills: Competências
+      skills_help: "Digite uma lista delimitada por vírgulas de suas habilidades. Por exemplo: Ruby on Rails, matemática, php, mysql, física,"
+      state: Estado
+      state_help: "Insira o seu estado se isso é relevante para o país."
+      update_profile: "Atualizar Perfil"
+      upload_photo: "Carregar uma foto:"
+      view_profile: "Ver perfil"

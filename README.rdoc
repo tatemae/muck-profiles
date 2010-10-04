@@ -1,46 +1,38 @@
 = MuckProfiles
 
-Add profiles to muck users.  This implements a photo for users as well as a property bag that enables total customization of the user's profile information including privacy settings.
+Muck profiles adds profiles to muck users.  This implements a photo for users as well as an easy way to add any number of properties to enable
+total customization of the user's profile information including privacy settings.
 
 == Installation
-Muck profile relies upon the muck-engine and muck-users gems as well as paperclip.  Add the following lines to your environment.rb file:
+Muck profile relies upon the muck-engine and muck-users gems as well as paperclip.  Add the following lines to your Gemfile:
 
-  config.gem "authlogic"
-  config.gem "searchlogic"
-  config.gem "bcrypt-ruby", :lib => "bcrypt"
-  config.gem 'paperclip'
-  config.gem 'muck-engine', :lib => 'muck_engine'
-  config.gem 'muck-users', :lib => 'muck_users'
-  config.gem 'muck-profiles', :lib => 'muck_profiles'
-  config.gem 'geokit'
-
-Next run rake gems:install
-
-MuckProfiles uses geokit to determine a users location and to make it possible to find users that are within a given proximity.
+  gem 'paperclip'
+  gem 'muck-engine', :require => 'muck_engine'
+  gem 'muck-users', :require => 'muck_users'
+  gem 'muck-profiles', :require => 'muck_profiles'
+  gem 'geokit' # Only needed if you want to add location to your profiles. MuckProfiles uses geokit to determine a users
+               # location and to make it possible to find users that are within a given proximity.
 
 Install the GeoKit Rails Plugin:
 
   script/plugin install git://github.com/andre/geokit-rails.git
 
-Be sure to get api keys from Google an Yahoo.  Instructions for doing so can be found in config/initializers/geokit_config.rb after installing the plugin.  We recommend moving the keys into
-global_config.yml:
+Be sure to get api keys from Google an Yahoo.  Instructions for doing so can be found in config/initializers/geokit_config.rb after installing the plugin.  
+We recommend moving the keys into secrets.yml:
 
-Change the lines in config/initializers/geokit_config.rb to:
-  Geokit::Geocoders::yahoo = GlobalConfig.yahoo_geo_key
-  Geokit::Geocoders::google = GlobalConfig.google_geo_key
-
-Put this in global_config.yml:
   google_geo_key: 'some key'  # API key for Google.  Get it here: http://www.google.com/apis/maps/signup.html
   yahoo_geo_key: 'some key'   # API key for Yahoo.  Get it here: http://developer.yahoo.com/faq/index.html#appid
 
-# Profile configuration
-  enable_guess_location: true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
+Then change the lines in config/initializers/geokit_config.rb to:
+  Geokit::Geocoders::yahoo = Secrets.yahoo_geo_key
+  Geokit::Geocoders::google = Secrets.google_geo_key
+
   
 == Usage
-Create a model called profile.rb and add 'acts_as_muck_profile'.  This mixes in the muck profile functionality but also permits further customization of the profile in your application.
+Create a model called profile.rb as show below.  This mixes in the muck profile functionality but also permits further customization of the profile in your application.
 
   class Profile < ActiveRecord::Base
-    acts_as_muck_profile
+    MuckProfiles::Models::Profile
   end
 
 Modify your user model so that it has a profile:
@@ -49,8 +41,8 @@ Modify your user model so that it has a profile:
     acts_as_authentic do |c|
       c.crypto_provider = Authlogic::CryptoProviders::BCrypt
     end
-    acts_as_muck_user
-    has_muck_profile
+    include MuckUsers::Models::User
+    include MuckProfiles::Models::User
   end
 
 
@@ -58,27 +50,45 @@ Your user model will now appear to have a 'photo' which is delegated to the prof
 
   @user.photo # returns a photo object from paperclip
 
-=== Acts as Solr
+== Configuration
+Create an initializer to configure muck profiles:
 
-Add the following to global_config.yml
-  profile_enable_solr: true # This enables or disables acts as solr for profiles.
+  MuckProfiles.configure do |config|
+    config.enable_solr = true           # This enables or disables acts as solr for profiles.
+    config.enable_guess_location = true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
+  end
   
-If you enable acts as solr you'll also want to specify a default policy.  This policy is used to determine which fields are public and private.
+=== Acts as Solr
+Muck Profiles works with solr to allow searching users. 
+
+  
+If you enable acts as solr you'll also want to specify a default policy in your configuration.  This policy is used to determine which fields are public and private.
 The default policy looks like this:
 
-  :policy => { :public => [:login, :first_name, :last_name, :about],
-               :authenticated => [:location, :city, :state_id, :country_id, :language_id],
-               :friends => [:email],
-               :private => [] }
-
+  MuckProfiles.configure do |config|
+    config.enable_solr = true           # This enables or disables acts as solr for profiles.
+    config.enable_geokit = true         # Turn geokit functionality on/off.
+    config.enable_guess_location = true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
+    config.policy => { :public => [:login, :first_name, :last_name, :about],
+                       :authenticated => [:location, :city, :state_id, :country_id, :language_id],
+                       :friends => [:email],
+                       :private => [] }
+    
+  end
+  
 If you add attributes to the profile as show below then you will want to specify which fields fall into each privacy setting.  Note that it is also
 possible to add new privacy levels simply by adding new values to the hash.  For example:
 
-  :policy => { :public => [:login, :first_name, :last_name, :about],
-               :authenticated => [:location, :city, :state_id, :country_id, :language_id],
-               :friends => [:email],
-               :private => [],
-               :instructors => [:grades] }
+  MuckProfiles.configure do |config|
+    config.enable_solr = true           # This enables or disables acts as solr for profiles.
+    config.enable_guess_location = true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
+    config.policy => { :public => [:login, :first_name, :last_name, :about],
+                       :authenticated => [:location, :city, :state_id, :country_id, :language_id],
+                       :friends => [:email],
+                       :private => [] ,
+                       :instructors => [:grades]}
+    
+  end
 
 For each top level key a method will be auto generated that returns the values from each attribute concatenated together.
 Assuming we have a profile with fields populated calling each method might return something like this:
@@ -172,4 +182,4 @@ in your model and add your new fields.  Note that you can also override 'sanitiz
   
   
   
-Copyright (c) 2009 Tatemae, released under the MIT license
+Copyright (c) 2009-2010 Tatemae, released under the MIT license

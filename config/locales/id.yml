@@ -1,0 +1,29 @@
+--- 
+id: 
+  muck: 
+    profiles: 
+      about: Tentang
+      about_help: "Masukkan informasi biografi untuk membantu orang lain mencari tahu tentang keterampilan Anda, minat, dll"
+      click_to_set: "Klik untuk menetapkan ini sebagai lokasi Anda."
+      could_not_find_user: "Tidak dapat menemukan pengguna khusus."
+      country: Negara
+      country_help: "Masukkan saat ini Anda saat ini."
+      edit_failure: "Terjadi kesalahan saat memperbarui profil Anda."
+      edit_profile: "Edit Profil"
+      edit_profile_title: "Mengedit profil untuk %{name}"
+      edit_success: "Profil Anda berhasil diperbarui"
+      interests: Minat
+      interests_help: "Masukkan daftar dipisahkan koma kepentingan Anda. Sebagai contoh: bersepeda, bersepeda gunung, catur, film"
+      language: Bahasa
+      language_help: "Masukkan bahasa utama Anda"
+      location: Lokasi
+      location_help: "Masukkan lokasi Anda. Sebagai contoh: Logan, UT, New York City, NY, dll"
+      location_suggestion: "Kami pikir Anda berada di %{location}."
+      problem_editing_profile: "Ada masalah memperbarui profil anda"
+      skills: Keterampilan
+      skills_help: "Masukkan daftar dipisahkan koma keterampilan Anda. Sebagai contoh: ruby on rails, php, mysql, fisika, matematika"
+      state: Negara
+      state_help: "Masukkan negara Anda jika hal ini relevan bagi negara anda."
+      update_profile: "Update Profil"
+      upload_photo: "Upload foto:"
+      view_profile: "Lihat Profil"

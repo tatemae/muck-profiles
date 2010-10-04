@@ -1,0 +1,29 @@
+--- 
+da: 
+  muck: 
+    profiles: 
+      about: Om
+      about_help: "Indtast en biografiske oplysninger til at hjælpe andre med at finde ud af om dine færdigheder, interesser, osv."
+      click_to_set: "Klik for at indstille dette som din placering."
+      could_not_find_user: "Kunne ikke finde den angivne bruger."
+      country: Land
+      country_help: "Indtast din nuværende aktuelle."
+      edit_failure: "Der opstod en fejl under opdateringen af din profil."
+      edit_profile: "Rediger profil"
+      edit_profile_title: "Redigering profil for %{name}"
+      edit_success: "Opdateret din profil"
+      interests: Interesser
+      interests_help: "Indtast en kommasepareret liste over dine interesser. For eksempel: cykling, mountain biking, skak, film"
+      language: Sprog
+      language_help: "Indtast dit primære sprog"
+      location: Beliggenhed
+      location_help: "Indtast din placering. For eksempel: Logan, UT, New York City, NY, osv"
+      location_suggestion: "Vi tror, du er i %{location}."
+      problem_editing_profile: "Der opstod et problem opdatere din profil"
+      skills: Færdigheder
+      skills_help: "Indtast en kommasepareret liste over dine evner. For eksempel: Ruby on Rails, PHP, MySQL, fysik, matematik"
+      state: Tilstand
+      state_help: "Indtast din tilstand, hvis dette er relevant for dit land."
+      update_profile: "Update Profile"
+      upload_photo: "Upload et foto:"
+      view_profile: "Se profil"

@@ -1,0 +1,29 @@
+--- 
+mt: 
+  muck: 
+    profiles: 
+      about: Dwar
+      about_help: "Ikteb informazzjoni bijografika biex jgħin lill-oħrajn issir taf dwar il-ħiliet tiegħek, l-interessi, eċċ"
+      click_to_set: "Ikklikkja biex jistabbilixxu dan bħala lokalità tiegħek."
+      could_not_find_user: "ma setgħetx issib l-utent speċifikat."
+      country: Pajjiż
+      country_help: "Ikteb kurrenti attwali tiegħek."
+      edit_failure: "Ġara żball waqt aġġornament profil tiegħek."
+      edit_profile: "Edit Profile"
+      edit_profile_title: "profil Editjar għall %{name}"
+      edit_success: "B&#39;suċċess aġġornata profil tiegħek"
+      interests: Interessi
+      interests_help: "Daħħal comma lista delimitata ta &#39;l-interessi tiegħek. Per eżempju: ċikliżmu, ċikliżmu fil-muntanji, taċ-ċess, films"
+      language: Lingwa
+      language_help: "Ikteb lingwa ewlenija tiegħek"
+      location: Location
+      location_help: "Ikteb lokalità tiegħek. Per eżempju: Logan, UT, New York City, NY, eċċ"
+      location_suggestion: "Aħna naħsbu int fil %{location}."
+      problem_editing_profile: "Kien hemm problema aġġornament profil tiegħek"
+      skills: Ħiliet
+      skills_help: "Daħħal comma lista delimitata ta &#39;ħiliet tiegħek. Per eżempju: ruby fuq binarji,, php mysql, il-fiżika, matematika"
+      state: Stat
+      state_help: "Ikteb l-istat tiegħek jekk dan huwa rilevanti għall-pajjiż tiegħek."
+      update_profile: "Aġġornament Profil"
+      upload_photo: "Tella ritratt:"
+      view_profile: "View Profile"

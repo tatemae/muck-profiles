@@ -1,0 +1,29 @@
+--- 
+tl: 
+  muck: 
+    profiles: 
+      about: "Tungkol sa"
+      about_help: "Magpasok ng isang byograpiko impormasyon upang makatulong sa iba malaman ang tungkol sa inyong mga kasanayan, mga interes, atbp"
+      click_to_set: "I-click upang itakda ito bilang iyong lokasyon."
+      could_not_find_user: "Hindi matagpuan ang tinukoy na gumagamit."
+      country: Bansa
+      country_help: "Ipasok ang iyong kasalukuyang kasalukuyang."
+      edit_failure: "May naganap na error habang ina-update ang iyong profile."
+      edit_profile: "I-edit ang Profile"
+      edit_profile_title: "Pag-edit ng profile para sa %{name}"
+      edit_success: "Matagumpay na nai-update ng iyong profile"
+      interests: Interes
+      interests_help: "Ipasok ang isang kuwit delimited listahan ng iyong mga interes. Halimbawa: pagbibisikleta, mountain biking, chess, mga pelikula"
+      language: Wika
+      language_help: "Ipasok ang iyong pangunahing wika"
+      location: Kinalalagyan
+      location_help: "Ipasok ang iyong lokasyon. Halimbawa: Logan, UT, New York City, NY, etc"
+      location_suggestion: "Sa tingin namin na ikaw ay sa %{location}."
+      problem_editing_profile: "May problema sa pag-update ng iyong profile"
+      skills: Kasanayan
+      skills_help: "Ipasok ang isang kuwit delimited listahan ng iyong kakayahan. Halimbawa: ruby sa daang-bakal, php, MySQL, physics, matematika"
+      state: Estado
+      state_help: "Ipasok ang iyong estado kung ito ay may kaugnayan sa inyong bansa."
+      update_profile: "Update Profile"
+      upload_photo: "Mag-upload ng isang larawan:"
+      view_profile: "View Profile"

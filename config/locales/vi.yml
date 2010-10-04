@@ -1,0 +1,29 @@
+--- 
+vi: 
+  muck: 
+    profiles: 
+      about: Giới
+      about_help: "Nhập thông tin tiểu sử để giúp người khác tìm hiểu về các kỹ năng của bạn, sở thích, vv"
+      click_to_set: "Nhấn vào đây để thiết lập này như vị trí của bạn."
+      could_not_find_user: "Không thể tìm thấy người dùng chỉ định."
+      country: "Quốc gia"
+      country_help: "Nhập hiện hành hiện tại của bạn."
+      edit_failure: "Đã xảy ra lỗi trong khi cập nhật hồ sơ của bạn."
+      edit_profile: "Chỉnh sửa hồ sơ"
+      edit_profile_title: "Chỉnh sửa hồ sơ cho %{name}"
+      edit_success: "Cập nhật thành công hồ sơ của bạn"
+      interests: "Sở thích"
+      interests_help: "Nhập một dấu phẩy danh sách giới hạn quyền lợi của bạn. Ví dụ: xe đạp, xe đạp leo núi, cờ vua, phim"
+      language: "Ngôn ngữ"
+      language_help: "Nhập ngôn ngữ chính của bạn"
+      location: "Địa điểm"
+      location_help: "Nhập địa điểm của bạn. Logan, UT, New York City, NY, vv Ví dụ:"
+      location_suggestion: "Chúng tôi nghĩ rằng bạn đang ở trong %{location}."
+      problem_editing_profile: "Có vấn đề cập nhật hồ sơ của bạn"
+      skills: "Kỹ năng"
+      skills_help: "Nhập một dấu phẩy phân cách danh sách các kỹ năng của bạn. Ví dụ: ruby trên ray, php, mysql, vật lý, toán học"
+      state: "Nhà nước"
+      state_help: "Nhập nhà nước của bạn nếu điều này có liên quan đến nước bạn."
+      update_profile: "Cập nhật thông tin"
+      upload_photo: "Tải lên một hình ảnh:"
+      view_profile: "Xem hồ sơ"

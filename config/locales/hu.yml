@@ -1,0 +1,29 @@
+--- 
+hu: 
+  muck: 
+    profiles: 
+      about: Rólunk
+      about_help: "Adjon meg egy életrajzi adatokat, hogy segítsen másokon megtudni a készségek, érdekek, stb"
+      click_to_set: "Kattintson a beállítani ezt a helyet."
+      could_not_find_user: "Nem található a megadott felhasználó."
+      country: Ország
+      country_help: "Adja meg a jelenlegi aktuális."
+      edit_failure: "Hiba történt frissítése profilt."
+      edit_profile: "Profil szerkesztése"
+      edit_profile_title: "Profil szerkesztése %{name}"
+      edit_success: "Sikeresen frissítette a profilját"
+      interests: Érdeklődés
+      interests_help: "Adja meg vesszővel elválasztott listája az Ön érdekeit. Például: kerékpározás, hegyi kerékpározás, sakk, filmek"
+      language: Nyelv
+      language_help: "Adja meg az elsődleges nyelvet"
+      location: Helyszín
+      location_help: "Adja meg a helyét. Például: Logan, UT, New York City, NY, stb."
+      location_suggestion: "Azt hiszem, te %{location}."
+      problem_editing_profile: "Volt egy probléma frissítése bemutatkozása"
+      skills: Készségek
+      skills_help: "Adja meg vesszővel elválasztott listája képességeit. Például: Ruby on Rails, php, mysql, fizika, matematika"
+      state: Állami
+      state_help: "Adja meg az állami, ha ez fontos az Ön országában."
+      update_profile: "Profil frissítése"
+      upload_photo: "Fénykép feltöltése:"
+      view_profile: "Profil megtekintése"

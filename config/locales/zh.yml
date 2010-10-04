@@ -1,0 +1,29 @@
+--- 
+zh: 
+  muck: 
+    profiles: 
+      about: 关于
+      about_help: 输入履历资料去帮助别人了解你的技能，兴趣等出
+      click_to_set: 点击设置为您的位置这一点。
+      could_not_find_user: 找不到指定的用户。
+      country: 国家
+      country_help: 输入您的电流。
+      edit_failure: 发生错误时您更新资料。
+      edit_profile: 编辑个人资料
+      edit_profile_title: "编辑配置文件%{name}"
+      edit_success: 成功更新您的个人资料
+      interests: 爱好
+      interests_help: 输入您的利益逗号分隔的列表。例如：自行车，山地自行车，象棋，电影
+      language: 语言
+      language_help: 输入您的主要语言
+      location: 地点
+      location_help: 输入您的位置。例如：洛根，UT斯达康，纽约市，纽约州等
+      location_suggestion: "我们认为你在%{location}."
+      problem_editing_profile: 有一个问题更新您的个人资料
+      skills: 技巧
+      skills_help: "输入您的技能逗号分隔的列表。例如：Ruby on Rails的，PHP，MySQL和物理，数学"
+      state: 国家
+      state_help: 输入您的状态，如果这涉及到你的国家。
+      update_profile: 更新个人资料
+      upload_photo: 上传照片：
+      view_profile: 查看专页
