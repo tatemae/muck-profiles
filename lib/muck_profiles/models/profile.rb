@@ -1,6 +1,10 @@
+# include MuckProfiles::Models::MuckProfile
+require 'paperclip'
+require 'sanitize'
+
 module MuckProfiles
   module Models
-    module Profile
+    module MuckProfile
 
       extend ActiveSupport::Concern
       
@@ -30,19 +34,19 @@ module MuckProfiles
         
         if MuckProfiles.configuration.enable_solr
           fields = []
-          options[:policy].keys.each do |key|
+          MuckProfiles.configuration.policy.keys.each do |key|
             field_name = "#{key}_fields"
             fields << {field_name.to_sym, :text}
             # Setup a method for each key in the policy that can generate a string of all the fields
             # associated with that key.  acts_as_solr will call this method.
             instance_eval do
               define_method field_name do
-                options[:policy][key].collect{ |attribute| self.send(attribute) }.join(' ')
+                MuckProfiles.configuration.policy[key].collect{ |attribute| self.send(attribute) }.join(' ')
               end
             end
           end
           write_inheritable_array(:solr_fields, fields)
-          write_inheritable_hash(:default_policy, options[:policy])
+          write_inheritable_hash(:default_policy, MuckProfiles.configuration.policy)
 
           require 'acts_as_solr'
           acts_as_solr( {:fields => fields}, {:multi_core => true, :default_core => 'en'})

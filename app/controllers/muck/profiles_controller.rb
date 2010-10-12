@@ -1,5 +1,4 @@
 class Muck::ProfilesController < ApplicationController
-  unloadable
   
   before_filter :setup_user, :only => [:show, :edit]
   
@@ -38,7 +37,7 @@ class Muck::ProfilesController < ApplicationController
   # and add something similar to the following:
   #    <div id="edit_profile">
   #      <%= output_errors(t('muck.profiles.problem_editing_profile'), {:class => 'help-box'}, @profile) %>
-  #      <% profile_form(@user) do |f| -%>
+  #      <%= profile_form(@user) do |f| -%>
   #        <%# Add custom fields here.  ie %>
   #        <%= f.text_field :custom_thing %>
   #      <% end -%>
@@ -47,11 +46,7 @@ class Muck::ProfilesController < ApplicationController
     @profile = @user.profile
     @page_title = t('muck.profiles.edit_profile_title', :name => @user.display_name)
     respond_to do |format|
-      format.pjs do
-        render_as_html do
-          render :template => 'profiles/edit', :layout => false # fancybox request
-        end
-      end
+      format.pjs { render :template => 'profiles/edit', :layout => false } # fancybox request 
       format.html { render :template => 'profiles/edit' }
     end
   end

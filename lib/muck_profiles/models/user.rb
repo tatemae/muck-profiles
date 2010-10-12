@@ -1,6 +1,7 @@
+#include MuckProfiles::Models::MuckUser
 module MuckProfiles
   module Models
-    module User
+    module MuckUser
 
       extend ActiveSupport::Concern
       

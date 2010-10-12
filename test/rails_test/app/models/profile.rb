@@ -20,5 +20,5 @@
 #
 
 class Profile < ActiveRecord::Base
-  MuckProfiles::Models::Profile
+  include MuckProfiles::Models::MuckProfile
 end

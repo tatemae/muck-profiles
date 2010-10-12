@@ -46,12 +46,14 @@ begin
     gemspec.description = "Profile engine for the muck system."
     gemspec.authors = ["Justin Ball", "Joel Duffin"]
     gemspec.rubyforge_project = 'muck-profiles'
-    gemspec.add_dependency "muck-engine"
-    gemspec.add_dependency "muck-users"
     gemspec.add_dependency "geokit"
     gemspec.add_dependency "paperclip"
     gemspec.add_dependency "sanitize"
     gemspec.add_dependency "uploader"
+    gemspec.add_dependency "muck-engine"
+    gemspec.add_dependency "muck-users"
+    gemspec.add_dependency "muck-comments"
+    gemspec.add_dependency "muck-contents"
     gemspec.add_dependency "muck-solr"
     gemspec.add_dependency "muck-shares"
     gemspec.add_dependency "muck-raker"

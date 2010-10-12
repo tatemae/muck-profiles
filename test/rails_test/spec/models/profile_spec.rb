@@ -32,6 +32,16 @@ describe Profile do
     @last_name.should == @profile.last_name
   end
 
+  describe "sanitize" do
+    before do
+      @profile = Factory(:profile)
+    end
+    it "should sanitize user input fields" do
+      @profile.should sanitize(:about)
+      @profile.should sanitize(:location)
+    end
+  end
+  
   describe "methods for acts_as_solr" do
     
     it "should have public_fields" do

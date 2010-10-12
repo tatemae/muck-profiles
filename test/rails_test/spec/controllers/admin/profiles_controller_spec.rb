@@ -2,6 +2,8 @@ require File.dirname(__FILE__) + '/../../spec_helper'
 
 describe Admin::Muck::ProfilesController do
 
+  render_views
+  
   it { should require_login :edit, :get }
   
   describe "logged in as normal user" do

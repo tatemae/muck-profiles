@@ -6,6 +6,7 @@ gem "mysql"
 # gem "authlogic"
 # TODO this is temporary until the official authlogic gem is updated for rails 3
 gem "authlogic", :git => "git://github.com/odorcicd/authlogic.git", :branch => "rails3"
+gem 'will_paginate', "~> 3.0.pre2"
 
 gem "disguise"
 gem "bcrypt-ruby", :require => "bcrypt"
@@ -15,7 +16,7 @@ gem "muck-engine", :require => "muck_engine", :path => "~/projects/muck-engine"
 gem "muck-users", :require => "muck_users", :path => "~/projects/muck-users"
 gem "muck-shares", :require => 'muck_shares', :path => "~/projects/muck-shares"
 gem 'muck-solr', :require => 'acts_as_solr', :path => "~/projects/acts_as_solr"
-gem "muck-profiles", :require => "muck_engine", :path => "../../"
+gem "muck-profiles", :require => "muck_profiles", :path => "../../"
 
 if RUBY_VERSION < "1.9"
   gem "ruby-debug"

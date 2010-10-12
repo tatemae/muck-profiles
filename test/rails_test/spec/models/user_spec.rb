@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe User do
 
-  describe 'A user instance with has_muck_profile' do
+  describe 'A user instance with include MuckProfiles::Models::MuckUser' do
     before(:each) do
       @user = Factory(:user)
     end

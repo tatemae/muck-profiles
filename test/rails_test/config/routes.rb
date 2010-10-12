@@ -1,5 +1,5 @@
 RailsTest::Application.routes.draw do
   root :to => "default#index"
-  resources :users, :has_one => :profile
+  resources :users
   match ':controller(/:action(/:id(.:format)))'
 end

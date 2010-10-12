@@ -27,12 +27,37 @@ Then change the lines in config/initializers/geokit_config.rb to:
   Geokit::Geocoders::yahoo = Secrets.yahoo_geo_key
   Geokit::Geocoders::google = Secrets.google_geo_key
 
-  
+
+If you used the muck template to create your rails application you will have a secrets.yml file.  If not then you will need to create a 
+secrets.yml file and then add the following to environment.rb right above Rails::Initializer.run do |config|
+
+  require 'ostruct'
+  require 'yaml'
+  ::Secrets = OpenStruct.new(YAML.load_file(File.expand_path('../secrets.yml', __FILE__))[Rails.env.to_sym])
+
+Omit secrets.yml from your version control system and use it to keep sensitive data like email server credentials
+
+  email_user_name: 'TODO_admin@#{domain_name}'    # Email server username
+  email_password = 'TODO_password'                # Email server password
+
+  production:
+    <<: *DEFAULT
+    # Add production only secrets
+  staging:
+    <<: *DEFAULT
+    # Add staging only secrets
+  development:
+    <<: *DEFAULT
+    # Development specific
+  test:
+    <<: *DEFAULT
+    # Test specific
+      
 == Usage
 Create a model called profile.rb as show below.  This mixes in the muck profile functionality but also permits further customization of the profile in your application.
 
   class Profile < ActiveRecord::Base
-    MuckProfiles::Models::Profile
+    include MuckProfiles::Models::MuckProfile
   end
 
 Modify your user model so that it has a profile:
@@ -41,8 +66,8 @@ Modify your user model so that it has a profile:
     acts_as_authentic do |c|
       c.crypto_provider = Authlogic::CryptoProviders::BCrypt
     end
-    include MuckUsers::Models::User
-    include MuckProfiles::Models::User
+    include MuckUsers::Models::MuckUser
+    include MuckProfiles::Models::MuckUser
   end
 
 
@@ -135,7 +160,7 @@ create form elements for the built in fields.  Add extra fields after that.
 
   <div id="edit_content" class="span-24 colborder column">
     <%= output_errors(t('muck.profiles.problem_editing_profile'), {:class => 'help-box'}, @user) %>
-    <% profile_form(@user) do |f| -%>
+    <%= profile_form(@user) do |f| -%>
       <%# can add form fields as desired here -%>
     <% end -%>
   </div>

@@ -1,4 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
+Rails.application.routes.draw do
 
   # profiles
   resources :profiles, :controller => 'muck/profiles' do
@@ -7,7 +7,9 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
   
-  resources :users, :has_one => :profile
+  resources :users do
+    resource :profile, :controller => 'muck/profiles'
+  end
   
   namespace :admin do
     resources :profiles, :controller => 'muck/profiles'

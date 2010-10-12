@@ -8,7 +8,8 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 require 'ostruct'
 require 'yaml'
-::Secrets = OpenStruct.new(YAML.load_file("\#{RAILS_ROOT}/config/secrets.yml")[RAILS_ENV])
+
+::Secrets = OpenStruct.new(YAML.load_file(File.expand_path('../secrets.yml', __FILE__))[Rails.env.to_sym])
 
 module RailsTest
   class Application < Rails::Application
