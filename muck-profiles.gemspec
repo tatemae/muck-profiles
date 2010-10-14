@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-10-12}
+  s.date = %q{2010-10-13}
   s.description = %q{Profile engine for the muck system.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -82,11 +82,11 @@ Gem::Specification.new do |s|
      "db/migrate/20091124203137_add_location_to_profiles.rb",
      "db/migrate/20091124205819_add_fields_to_profiles.rb",
      "db/migrate/20100206000906_remove_name_fields.rb",
-     "lib/muck_profiles.rb",
-     "lib/muck_profiles/config.rb",
-     "lib/muck_profiles/engine.rb",
-     "lib/muck_profiles/models/profile.rb",
-     "lib/muck_profiles/models/user.rb",
+     "lib/muck-profiles.rb",
+     "lib/muck-profiles/config.rb",
+     "lib/muck-profiles/engine.rb",
+     "lib/muck-profiles/models/profile.rb",
+     "lib/muck-profiles/models/user.rb",
      "lib/tasks/muck_profiles.rake",
      "muck-profiles.gemspec",
      "test/rails_test/.gitignore",
