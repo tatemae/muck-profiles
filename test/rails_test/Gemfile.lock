@@ -17,7 +17,7 @@ PATH
     muck-engine (3.0.1)
       overlord
       validation_reflection
-      will_paginate
+      will_paginate (~> 3.0.beta)
 
 PATH
   remote: /Users/jbasdf/projects/muck-profiles
@@ -242,7 +242,7 @@ GEM
       paperclip
       rack
     validation_reflection (1.0.0)
-    will_paginate (2.3.15)
+    will_paginate (3.0.pre2)
     xml-simple (1.0.12)
     ya2yaml (0.30)
 

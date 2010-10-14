@@ -14,7 +14,7 @@ gem "overlord"
 
 gem "muck-engine", :path => "~/projects/muck-engine"
 gem "muck-users", :path => "~/projects/muck-users"
-gem "muck-shares", :require => 'muck_shares', :path => "~/projects/muck-shares"
+gem "muck-shares", :path => "~/projects/muck-shares"
 gem 'muck-solr', :require => 'acts_as_solr', :path => "~/projects/acts_as_solr"
 gem "muck-profiles", :path => "../../"
 

@@ -1,4 +1,7 @@
+require 'paperclip'
+require 'sanitize'
 require 'muck-engine'
+require 'muck-users'
 require 'muck-contents'
 
 require 'muck-profiles/config'
