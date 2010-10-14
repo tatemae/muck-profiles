@@ -16,6 +16,9 @@ gem "muck-engine", :path => "~/projects/muck-engine"
 gem "muck-users", :path => "~/projects/muck-users"
 gem "muck-shares", :path => "~/projects/muck-shares"
 gem 'muck-solr', :require => 'acts_as_solr', :path => "~/projects/acts_as_solr"
+gem "muck-contents", :path => "~/projects/muck-contents"
+gem 'muck-comments', :path => "~/projects/muck-comments"
+gem 'muck-activities', :path => "~/projects/muck-activities"
 gem "muck-profiles", :path => "../../"
 
 if RUBY_VERSION < "1.9"
@@ -23,7 +26,7 @@ if RUBY_VERSION < "1.9"
 end
 
 group :test, :development do
-  gem "rspec-rails", ">=2.0.0.beta.22"
+  gem "rspec-rails", ">=2.0.0"
   gem "cucumber-rails"
 end
 
@@ -35,7 +38,7 @@ group :test do
   gem "factory_girl"
   gem "cucumber"
   gem "rcov"
-  gem "rspec", ">=2.0.0.beta.22"
+  gem "rspec", ">=2.0.0"
   gem "database_cleaner"
   gem "spork"
   gem "launchy"
