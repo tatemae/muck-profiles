@@ -7,9 +7,9 @@ total customization of the user's profile information including privacy settings
 Muck profile relies upon the muck-engine and muck-users gems as well as paperclip.  Add the following lines to your Gemfile:
 
   gem 'paperclip'
-  gem 'muck-engine', :require => 'muck_engine'
-  gem 'muck-users', :require => 'muck_users'
-  gem 'muck-profiles', :require => 'muck_profiles'
+  gem 'muck-engine'
+  gem 'muck-users'
+  gem 'muck-profiles'
   gem 'geokit' # Only needed if you want to add location to your profiles. MuckProfiles uses geokit to determine a users
                # location and to make it possible to find users that are within a given proximity.
 
@@ -33,7 +33,7 @@ secrets.yml file and then add the following to environment.rb right above Rails:
 
   require 'ostruct'
   require 'yaml'
-  ::Secrets = OpenStruct.new(YAML.load_file(File.expand_path('../secrets.yml', __FILE__))[Rails.env.to_sym])
+  ::Secrets = OpenStruct.new(YAML.load_file(File.expand_path('../secrets.yml', __FILE__))[Rails.env])
 
 Omit secrets.yml from your version control system and use it to keep sensitive data like email server credentials
 

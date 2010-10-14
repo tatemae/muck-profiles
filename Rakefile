@@ -21,7 +21,7 @@ rescue LoadError
   end
 end
 
-desc 'Generate documentation for the muck_profiles plugin.'
+desc 'Generate documentation for the muck-profiles plugin.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'MuckProfiles'
