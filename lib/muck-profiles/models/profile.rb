@@ -65,7 +65,7 @@ module MuckProfiles
         if MuckProfiles.configuration.enable_guess_location && self.user.current_login_ip
           location = Geokit::Geocoders::MultiGeocoder.geocode(self.user.current_login_ip)
           state = State.find_by_abbreviation(location.state)
-          country = Country.find_by_abbreviation(location.country)
+          country = Country.find_by_abbreviation(location.country_code)
           self.update_attributes(
             :location => "#{location.city}, #{location.state || location.province} #{location.country_code}",
             :lat => location.lat,

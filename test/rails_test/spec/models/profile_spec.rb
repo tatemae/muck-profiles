@@ -66,6 +66,24 @@ describe Profile do
     
   end
 
+  describe "guess_and_assign_location_via_ip" do
+    before(:each) do
+      @user = Factory(:user, :current_login_ip => '129.123.54.100')
+      @profile = @user.profile
+      @state = Factory(:state, :abbreviation => 'UT')
+      @country = Factory(:country, :abbreviation => 'US')
+    end
+    it "should find a location for the given IP" do
+      @profile.guess_and_assign_location_via_ip
+      @profile.location.should include('Logan')
+      @profile.lat.should_not be_blank
+      @profile.lng.should_not be_blank
+      @profile.city.should_not be_blank
+      @profile.state.should == @state
+      @profile.country.should == @country
+    end
+  end
+  
   def get_fields_string(profile, fields)
     fields.collect{ |f| profile.send(f) }.join(' ')
   end
