@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-profiles}
-  s.version = "3.0.0"
+  s.version = "3.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-10-14}
+  s.date = %q{2010-10-18}
   s.description = %q{Profile engine for the muck system.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -2194,8 +2194,6 @@ Gem::Specification.new do |s|
      "test/rails_test/spec/models/profile_spec.rb",
      "test/rails_test/spec/models/user_spec.rb",
      "test/rails_test/spec/spec_helper.rb",
-     "test/rails_test/test/performance/browsing_test.rb",
-     "test/rails_test/test/test_helper.rb",
      "test/rails_test/vendor/plugins/.gitkeep",
      "test/rails_test/vendor/plugins/geokit-rails/CHANGELOG.rdoc",
      "test/rails_test/vendor/plugins/geokit-rails/MIT-LICENSE",
@@ -2240,7 +2238,7 @@ Gem::Specification.new do |s|
      "test/rails_test/vendor/plugins/geokit-rails/test/tasks.rake",
      "test/rails_test/vendor/plugins/geokit-rails/test/test_helper.rb"
   ]
-  s.homepage = %q{http://github.com/tatemae/muck_profiles}
+  s.homepage = %q{http://github.com/tatemae/muck-profiles}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{muck-profiles}
@@ -2311,8 +2309,6 @@ Gem::Specification.new do |s|
      "test/rails_test/spec/models/profile_spec.rb",
      "test/rails_test/spec/models/user_spec.rb",
      "test/rails_test/spec/spec_helper.rb",
-     "test/rails_test/test/performance/browsing_test.rb",
-     "test/rails_test/test/test_helper.rb",
      "test/rails_test/vendor/plugins/geokit-rails/init.rb",
      "test/rails_test/vendor/plugins/geokit-rails/install.rb",
      "test/rails_test/vendor/plugins/geokit-rails/lib/geokit-rails/acts_as_mappable.rb",
