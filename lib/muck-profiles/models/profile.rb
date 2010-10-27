@@ -32,13 +32,13 @@ module MuckProfiles
 
         acts_as_mappable if MuckProfiles.configuration.enable_geokit
         
-        if MuckProfiles.configuration.enable_solr
+        if MuckProfiles.configuration.enable_solr || MuckProfiles.configuration.enable_sunspot
           fields = []
           MuckProfiles.configuration.policy.keys.each do |key|
             field_name = "#{key}_fields"
             fields << {field_name.to_sym, :text}
             # Setup a method for each key in the policy that can generate a string of all the fields
-            # associated with that key.  acts_as_solr will call this method.
+            # associated with that key.  acts_as_solr or sunspot will call this method.
             instance_eval do
               define_method field_name do
                 MuckProfiles.configuration.policy[key].collect{ |attribute| self.send(attribute) }.join(' ')
@@ -48,8 +48,17 @@ module MuckProfiles
           write_inheritable_array(:solr_fields, fields)
           write_inheritable_hash(:default_policy, MuckProfiles.configuration.policy)
 
-          require 'acts_as_solr'
-          acts_as_solr( {:fields => fields}, {:multi_core => true, :default_core => 'en'})
+          if MuckProfiles.configuration.enable_solr
+            require 'acts_as_solr'
+            acts_as_solr( {:fields => fields}, {:multi_core => true, :default_core => 'en'})
+          elsif MuckProfiles.configuration.enable_sunspot
+            require 'sunspot'
+            searchable do
+              fields.each do |field|
+                text field
+              end
+            end
+          end
         end
 
         attr_protected :created_at, :updated_at, :photo_file_name, :photo_content_type, :photo_file_size

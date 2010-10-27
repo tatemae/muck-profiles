@@ -13,13 +13,14 @@ module MuckProfiles
   end
 
   class Configuration
-    
+    attr_accessor :enable_sunspot         # This enables or disables sunspot for profiles. Only use acts_as_solr or sunspot not both. Sunspot does not include multicore support.
     attr_accessor :enable_solr            # This enables or disables acts as solr for profiles.
     attr_accessor :enable_geokit          # Turn geokit functionality on/off
     attr_accessor :enable_guess_location  # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
     attr_accessor :policy
     
     def initialize
+      self.enable_sunspot = false
       self.enable_solr = true
       self.enable_guess_location = true
       self.policy = { :public => [:login, :first_name, :last_name, :about],

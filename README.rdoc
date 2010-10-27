@@ -79,6 +79,7 @@ Your user model will now appear to have a 'photo' which is delegated to the prof
 Create an initializer to configure muck profiles:
 
   MuckProfiles.configure do |config|
+    config.enable_sunspot = false       # This enables or disables sunspot for profiles. Only use acts_as_solr or sunspot not both. Sunspot does not include multicore support.
     config.enable_solr = true           # This enables or disables acts as solr for profiles.
     config.enable_guess_location = true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
   end
@@ -87,10 +88,11 @@ Create an initializer to configure muck profiles:
 Muck Profiles works with solr to allow searching users. 
 
   
-If you enable acts as solr you'll also want to specify a default policy in your configuration.  This policy is used to determine which fields are public and private.
+If you enable acts_as_solr or sunspot you'll also want to specify a default policy in your configuration.  This policy is used to determine which fields are public and private.
 The default policy looks like this:
 
   MuckProfiles.configure do |config|
+    config.enable_sunspot = false       # This enables or disables sunspot for profiles. Only use acts_as_solr or sunspot not both. Sunspot does not include multicore support.
     config.enable_solr = true           # This enables or disables acts as solr for profiles.
     config.enable_geokit = true         # Turn geokit functionality on/off.
     config.enable_guess_location = true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
@@ -105,6 +107,7 @@ If you add attributes to the profile as show below then you will want to specify
 possible to add new privacy levels simply by adding new values to the hash.  For example:
 
   MuckProfiles.configure do |config|
+    config.enable_sunspot = false       # This enables or disables sunspot for profiles. Only use acts_as_solr or sunspot not both. Sunspot does not include multicore support.
     config.enable_solr = true           # This enables or disables acts as solr for profiles.
     config.enable_guess_location = true # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
     config.policy => { :public => [:login, :first_name, :last_name, :about],

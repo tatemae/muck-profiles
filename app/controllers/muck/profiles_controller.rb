@@ -14,9 +14,21 @@ class Muck::ProfilesController < ApplicationController
     @query = params[:q]
     @page = (params[:page] || 1).to_i
     @rows = (params[:rows] || 10).to_i
-    results = Profile.find_by_solr(@query, :limit => @rows, :offset => @rows*(@page-1), :core => 'en')
-    @hit_count = results.total
-    @users = results.results.paginate(:page => @page, :per_page => @rows, :total_entries => @hit_count)
+    if MuckProfile.configuration.enable_solr
+      results = Profile.find_by_solr(@query, :limit => @rows, :offset => @rows*(@page-1), :core => 'en')
+      @hit_count = results.total
+      @users = results.results.paginate(:page => @page, :per_page => @rows, :total_entries => @hit_count)
+    elsif MuckProfile.configuration.enable_sunspot
+      results = Sunspot.search Profile do
+        keywords @query
+        paginate :page => @page, :per_page => @per_page
+      end      
+      @hit_count = results.total
+      @users = results.results.paginate(:page => @page, :per_page => @rows, :total_entries => @hit_count)
+    else
+      raise translate('muck.profiles.search_not_enabled')
+    end
+    
     respond_to do |format|
       format.html { render :template => 'profiles/index' }
     end

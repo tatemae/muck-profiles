@@ -26,3 +26,4 @@ en:
       language_help: "Enter your primary language"
       location_suggestion: "We think you're in %{location}."
       click_to_set: "Click to set this as your location."
+      search_not_enabled: "Search not enabled for profiles. Set either enable_solr or enable_sunspot to true in your profile configuration." 
