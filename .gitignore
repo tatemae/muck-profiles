@@ -29,3 +29,4 @@ pkg/*
 log/*
 solr_indexes
 secrets.yml
+test/log/*
