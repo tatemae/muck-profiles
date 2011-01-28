@@ -9,13 +9,13 @@ location_id = 'location' -%>
     <%= f.text_field :first_name, { :label => t('muck.users.first_name') } %>
     <%= f.text_field :last_name, { :label => t('muck.users.last_name') } %>
     <%= f.text_field :email, { :label => t('muck.users.email') } %>
-    <% f.fields_for(:profile, :builder => MuckEngine::FormBuilder) do |pf| %>
+    <%= f.fields_for(:profile, :builder => MuckEngine::FormBuilder) do |pf| %>
       <div id="edit_profile_image">
         <%= icon @user, :thumb %>
         <%= pf.file_field :photo, { :label => t('muck.profiles.upload_photo') } %>
       </div>
       <%= pf.text_field :location, {:id => location_id, :class => 'tags', :tip => t('muck.profiles.location_help'), :label => t('muck.profiles.location') } %>
-      <%= location_suggestion(location_id) if @profile.location.blank? %>
+      <%= location_suggestion(location_id) if @profile.location.blank? && MuckProfiles.configuration.enable_geokit %>
       <%#= pf.text_field :skill_list, {:class => 'tags', :tip => t('muck.profiles.skills_help'), :label => t('muck.profiles.skills') } %>
       <%#= pf.text_field :interest_list, {:class => 'tags', :tip => t('muck.profiles.interests_help'), :label => t('muck.profiles.interests') } %>
       <%= pf.state_select(:state_id, {:tip => t('muck.profiles.state_help'), :label => t('muck.profiles.state')}) %>
