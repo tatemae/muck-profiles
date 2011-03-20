@@ -2,6 +2,7 @@
   <%= I18n.t('muck.profiles.location_suggestion', :location => location) %>
   <a href="#" id="set_<%=field_id%>"><%=I18n.t('muck.profiles.click_to_set')%></a>
 </div>
+<% content_for :javascript do -%>
 <script type="text/javascript">
 jQuery(document).ready(function() {
 	jQuery("#set_<%=field_id%>").click(function() {
@@ -10,3 +11,4 @@ jQuery(document).ready(function() {
 	});
 });
 </script>
+<% end -%>
