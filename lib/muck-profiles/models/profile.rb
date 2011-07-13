@@ -9,6 +9,7 @@ module MuckProfiles
       extend ActiveSupport::Concern
       
       included do
+        include MuckEngine::RemotePhotoMethods
         belongs_to :user
         belongs_to :state
         belongs_to :country
@@ -31,6 +32,8 @@ module MuckProfiles
         delegate :full_name, :to => :user
 
         acts_as_mappable if MuckProfiles.configuration.enable_geokit
+        
+        after_create :guess_and_assign_location_via_ip
         
         if MuckProfiles.configuration.enable_solr || MuckProfiles.configuration.enable_sunspot
           fields = []
@@ -83,10 +86,6 @@ module MuckProfiles
             :state => state,
             :country => country)
         end
-      end
-      
-      def after_create
-        guess_and_assign_location_via_ip
       end
       
       # Sanitize content before saving.  This prevent XSS attacks and other malicious html.

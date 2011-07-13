@@ -1,11 +1,9 @@
 source "http://rubygems.org"
 
-gem "rails", "3.0.5"
+gem "rails", "3.0.7"
 gem "mysql"
 
-# gem "authlogic"
-# TODO this is temporary until the official authlogic gem is updated for rails 3
-gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
+gem "authlogic"
 
 gem "disguise"
 gem "bcrypt-ruby", :require => "bcrypt"
