@@ -1,6 +1,5 @@
-require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rubygems'
+require 'bundler'
 require 'rspec/core/rake_task'
 
 desc 'Default: run specs.'
@@ -26,10 +25,17 @@ rescue LoadError
   end
 end
 
+require 'rake/rdoctask'
 desc 'Generate documentation for the muck-profiles plugin.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
+  if File.exist?('VERSION.yml')
+    config = YAML.load(File.read('VERSION.yml'))
+    version = "#{config[:major]}.#{config[:minor]}.#{config[:patch]}"
+  else
+    version = ""
+  end
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'MuckProfiles'
+  rdoc.title    = 'muck-profiles #{version}'
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
@@ -63,7 +69,6 @@ begin
     gem.add_dependency "muck-shares"
     gem.add_dependency "muck-raker"
     gem.files.exclude 'test/**'
-    gem.test_files.exclude 'test/**'
   end
    
   Jeweler::RubyforgeTasks.new do |rubyforge|
