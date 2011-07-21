@@ -57,7 +57,6 @@ begin
     gem.description = "Profile engine for the muck system."
     gem.authors = ["Justin Ball", "Joel Duffin"]
     
-    gem.add_dependency "geokit"
     gem.add_dependency "paperclip"
     gem.add_dependency "sanitize"
     gem.add_dependency "uploader"
@@ -65,7 +64,6 @@ begin
     gem.add_dependency "muck-users"
     gem.add_dependency "muck-comments"
     gem.add_dependency "muck-contents"
-    gem.add_dependency "muck-solr"
     gem.add_dependency "muck-shares"
     gem.add_dependency "muck-raker"
     gem.files.exclude 'test/**'
