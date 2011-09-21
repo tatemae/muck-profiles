@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "rails", "3.0.7"
+gem "rails", "3.0.10"
 gem "mysql"
 
 gem "authlogic"
@@ -9,21 +9,21 @@ gem "disguise"
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "overlord"
 gem "jammit"
+gem 'geokit'
+gem 'sunspot_rails', '~> 1.2.1'
 
 gem "muck-engine", :path => "~/projects/muck-engine"
 gem "muck-users", :path => "~/projects/muck-users"
 gem "muck-shares", :path => "~/projects/muck-shares"
-gem 'muck-solr', :require => 'acts_as_solr', :path => "~/projects/acts_as_solr"
+#gem 'muck-solr', :require => 'acts_as_solr', :path => "~/projects/acts_as_solr"
 gem "muck-contents", :path => "~/projects/muck-contents"
 gem 'muck-comments', :path => "~/projects/muck-comments"
 gem 'muck-activities', :path => "~/projects/muck-activities"
 gem "muck-profiles", :path => "../"
 
-if RUBY_VERSION < "1.9"
-  gem "ruby-debug"
-end
-
 group :test, :development do
+  gem "ruby-debug", :platform => [:ruby_18]
+  gem "ruby-debug19", :platform => [:ruby_19]
   gem "rspec-rails", ">=2.1.0"
   gem "cucumber-rails"
 end

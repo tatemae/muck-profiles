@@ -39,7 +39,7 @@ module MuckProfiles
           fields = []
           MuckProfiles.configuration.policy.keys.each do |key|
             field_name = "#{key}_fields"
-            fields << {field_name.to_sym, :text}
+            fields << {field_name.to_sym => :text}
             # Setup a method for each key in the policy that can generate a string of all the fields
             # associated with that key.  acts_as_solr or sunspot will call this method.
             instance_eval do

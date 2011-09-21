@@ -31,3 +31,10 @@ MuckEngine.configure do |config|
   config.google_tracking_set_domain = "example.com"   # Base domain provided to Google Analytics. Useful if you are using subdomains but want all traffic 
                                               # recorded into one account.
 end
+
+
+MuckProfiles.configure do |config|
+  config.enable_sunspot = true          # This enables or disables sunspot for profiles. Only use acts_as_solr or sunspot not both. Sunspot does not include multicore support.
+  config.enable_solr = false            # This enables or disables acts as solr for profiles.
+  config.enable_guess_location = true   # If true the profile system will attempt to determine the user's location via IP and populated with the location, lat and lon fields.
+end

@@ -56,17 +56,7 @@ begin
     gem.homepage = "http://github.com/tatemae/muck-profiles"
     gem.description = "Profile engine for the muck system."
     gem.authors = ["Justin Ball", "Joel Duffin"]
-    
-    gem.add_dependency "paperclip"
-    gem.add_dependency "sanitize"
-    gem.add_dependency "uploader"
-    gem.add_dependency "muck-engine"
-    gem.add_dependency "muck-users"
-    gem.add_dependency "muck-comments"
-    gem.add_dependency "muck-contents"
-    gem.add_dependency "muck-shares"
-    gem.add_dependency "muck-raker"
-    gem.files.exclude 'test/**'
+    gem.files.exclude 'test/**/**'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
